@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body {
+  max-width: 960px;
+  background-color: #eeeeee;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #398072;
+  text-align: center;
+  margin: 60px auto;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.item {
+  width: 28%;
+  background-color: #fff;
+}
+
+.content__ttl {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.line {
+  width: 10px;
+  height: 24px;
+  background-color: #398072;
+}
+
+.ttl {
+  font-size: 20px;
+  color: #398072;
+  margin-left: 4px;
+}
+
+.txt {
+  font-size: 14px;
+  margin: 13px 15px 13px 8px;
+}
+
+@media screen and (max-width: 400px) {
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 94%;
+  }
+
+  .img img {
+    width: 100%;
+  }
+}
