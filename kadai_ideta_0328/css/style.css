@@ -19,6 +19,10 @@ body {
   background: #e8d9bf;
 }
 
+.header_slider img {
+  width: 100%;
+}
+
 .header_wrap {
   display: flex;
   justify-content: space-between;
@@ -87,7 +91,7 @@ body {
 }
 
 .about_content {
-  max-width: 42%;
+  max-width: 41%;
 }
 
 .about_content h2 {
@@ -103,13 +107,14 @@ body {
 .about_content p:nth-child(3) {
   font-size: 16px;
   line-height: 1.6;
+  text-align: justify;
   margin-top: 23px;
 }
 
 /* メニュー */
 
 #menu h2 {
-  margin: 41px auto 39px;
+  margin: 96px auto 39px;
 }
 
 .mennu_items {
@@ -136,6 +141,7 @@ h3 {
 #menu p {
   font-size: 17px;
   line-height: 1.4;
+  text-align: justify;
   margin-top: 45px;
 }
 
@@ -157,13 +163,12 @@ h3 {
 
 #event div {
   max-width: 100%;
-  min-height: 200px;
   border: 3px solid black;
   background: #fff;
 }
 
 table {
-  margin: 40px auto;
+  margin: 45px auto;
 }
 
 .event_day {
@@ -219,8 +224,8 @@ footer p {
 
 .return {
   position: fixed;
-  right: 308px;
-  bottom: 230px;
+  right: 10px;
+  bottom: 100px;
 }
 
 .return img {
