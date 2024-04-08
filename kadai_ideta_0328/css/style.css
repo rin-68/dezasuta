@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section_inner {
   max-width: 1000px;
   margin: 0 auto;
