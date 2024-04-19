@@ -7,18 +7,32 @@
     <title>第4回講義</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="header">
         <div class="header_slider">
-            <img src="./images/pc_first-100.jpg" alt="店内の様子">
+            <picture>
+                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                <img src="./images/pc_first-100.jpg" alt="店内の様子">
+            </picture>
         </div>
         <div class="header_wrap">
             <h1>
                 <img src="./images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE">
             </h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#menu">MENU</a></li>
@@ -38,13 +52,16 @@
     </header>
     <main>
         <section id="about" class="section_inner">
-            <div class="about_img">
+            <div class="pc_about_img">
                 <img src="./images/pc_about-100.jpg" alt="コーヒーの画像">
             </div>
             <div class="about_content">
                 <h2>
                     <img src="./images/about_us@2x.png" alt="ABOUT US">
                 </h2>
+                <div class="sp_about_img">
+                    <img src="./images/about_us@2x-100.jpg" alt="コーヒーの画像">
+                </div>
                 <p>私たちが提供する
                     <br>こだわりのコーヒー
                 </p>
@@ -56,24 +73,33 @@
             <h2>
                 <img src="./images/menu@2x.png" alt="MENU">
             </h2>
-            <div class="mennu_items">
+            <div class="menu_items">
                 <div class="menu_item">
-                    <div class="menu_img">
+                    <div class="pc_menu_img">
                         <img src="./images/pc_menu_drink-100.jpg" alt="コーヒーの画像">
+                    </div>
+                    <div class="sp_menu_img">
+                        <img src="./images/drink_sp@2x-100.jpg" alt="コーヒーの画像">
                     </div>
                     <h3>Drink</h3>
                     <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="menu_item">
-                    <div class="menu_img">
+                    <div class="pc_menu_img">
                         <img src="./images/pc_menu_food-100.jpg" alt="パスタの画像">
+                    </div>
+                    <div class="sp_menu_img">
+                        <img src="./images/food_sp@2x-100.jpg" alt="パスタの画像">
                     </div>
                     <h3>Food</h3>
                     <p>フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="menu_item">
-                    <div class="menu_img">
+                    <div class="pc_menu_img">
                         <img src="./images/pc_menu_sweets-100.jpg" alt="ケーキの画像">
+                    </div>
+                    <div class="sp_menu_img">
+                        <img src="./images/cake_sp@2x-100.jpg" alt="ケーキの画像">
                     </div>
                     <h3>Sweets</h3>
                     <p>スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
@@ -84,7 +110,7 @@
             <h2>
                 <img src="./images/gallery@2x.png" alt="GALLERY">
             </h2>
-            <div class="gallery_items">
+            <div class="pc_gallery_items">
                 <div>
                     <img src="./images/pc_gallary_05-100.jpg" alt="店内を利用するお客さんの様子">
                 </div>
@@ -101,13 +127,16 @@
                     <img src="./images/pc_gallary_01-100.jpg" alt="コーヒを淹れている画像">
                 </div>
             </div>
+            <div class="sp_gallery_items">
+                <img src="./images/mobile_gallery-100.jpg" alt="">
+            </div>
         </section>
         <section id="event" class="section_inner">
             <h2>
                 <img src="./images/event@2x.png" alt="EVENT">
             </h2>
             <div>
-                <table>
+                <table class="pc_table">
                     <tr>
                         <td class="event_day">2020.06.23</td>
                         <td><a href="">7月はイベント出店のため0/0お休みします</a></td>
@@ -119,6 +148,20 @@
                     <tr>
                         <td class="event_day">2020.02.06</td>
                         <td><a href="">コーヒーの日で30％OFFイベントを開催［3日間限定］</a></td>
+                    </tr>
+                </table>
+                <table class="sp_table">
+                    <tr>
+                        <td class="event_day">2020.06.23</td>
+                        <td><a href="">7月はイベント出店のため0/0･･･</a></td>
+                    </tr>
+                    <tr>
+                        <td class="event_day">2020.03.15</td>
+                        <td><a href="">春の新商品新発売。話題のあのブランド･･･</a></td>
+                    </tr>
+                    <tr>
+                        <td class="event_day">2020.02.06</td>
+                        <td><a href="">コーヒーの日で30％OFFイベントを･･･</a></td>
                     </tr>
                 </table>
             </div>
@@ -153,6 +196,14 @@
             <img src="./images/to_top@2x.png" alt="ここをクリックするとTOPへ戻る画像">
         </a>
     </div>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            })
+        });
+    </script>
 </body>
 
 </html>
