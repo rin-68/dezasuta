@@ -135,6 +135,10 @@ body {
   position: relative;
 }
 
+.menu_item > div {
+  position: relative;
+}
+
 .pc_menu_img img {
   border-radius: 0 41px 0 0;
 }
@@ -143,7 +147,7 @@ h3 {
   font-size: 38px;
   color: #d30202;
   position: absolute;
-  top: 186px;
+  top: 90%;
 }
 
 #menu p {
@@ -244,6 +248,7 @@ footer p {
 
 .sp_nav,
 .sp_btn,
+.sp_header_txt,
 .sp_about_img,
 .sp_menu_img,
 .sp_gallery_items,
@@ -256,7 +261,7 @@ footer p {
     font-size: 78px;
   }
 
-  .about_content p:nth-child(2) {
+  .about_content p:nth-of-type(1) {
     font-size: 38px;
   }
 
@@ -345,6 +350,7 @@ footer p {
 }
 
 @media screen and (max-width: 767px) {
+  .pc_header_txt,
   .pc_about_img,
   .pc_menu_img,
   .pc_gallery_items,
@@ -355,7 +361,7 @@ footer p {
   /* 共通部分 */
 
   h2 img {
-    max-height: 45px;
+    max-height: 46px;
   }
 
   .return img {
@@ -372,6 +378,14 @@ footer p {
     margin: 41px auto 34px auto;
   }
 
+  .sp_header_txt {
+    display: block;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 335px;
+    margin: 0 auto;
+  }
+
   .header_content p:nth-child(1) {
     font-size: 17px;
   }
@@ -380,13 +394,6 @@ footer p {
     font-size: 38px;
     line-height: 1.1;
     margin: 23px 0 13px 0;
-  }
-
-  .header_content p:nth-child(3) {
-    font-size: 16px;
-    line-height: 1.8;
-    max-width: 336px;
-    margin: 0 auto;
   }
 
   /* アバウト */
@@ -412,7 +419,7 @@ footer p {
   }
 
   .about_content p {
-    width: 335px;
+    padding: 0px 5%;
   }
 
   .about_content p:nth-of-type(1) {
@@ -433,15 +440,10 @@ footer p {
     padding: 0px;
   }
 
-  #menu h2 {
-    margin: 45px auto 18px auto;
-  }
-
   .menu_items {
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    max-width: 300px;
+    margin: 0 10%;
   }
 
   .menu_item {
@@ -449,7 +451,7 @@ footer p {
   }
 
   .menu_item:nth-child(n + 2) {
-    margin-top: 13px;
+    margin-top: 60px;
   }
 
   .sp_menu_img {
@@ -457,18 +459,18 @@ footer p {
   }
 
   .sp_menu_img img {
+    width: 100%;
     border-radius: 0 41px 0 0;
   }
 
   h3 {
     font-size: 40px;
-    top: 186px;
+    top: 95%;
   }
 
   #menu p {
     font-size: 17px;
     line-height: 1.5;
-    height: 115px;
     margin-top: 53px;
   }
 
@@ -487,7 +489,7 @@ footer p {
 
   /* イベント */
   #event {
-    max-width: 335px;
+    margin: 0 5%;
   }
 
   td {
@@ -497,7 +499,7 @@ footer p {
 
   .sp_table {
     display: block;
-    width: 291px;
+    max-width: 291px;
     margin: 0px auto;
     border-spacing: 0px 27px;
   }
@@ -523,8 +525,12 @@ footer p {
   footer > div {
     flex-direction: column;
     gap: 28px;
-    margin: 0 auto;
-    width: 308px;
+    padding: 20px;
+  }
+
+  footer div:nth-of-type(2),
+  footer div:nth-of-type(3) {
+    max-width: 308px;
   }
 
   footer p {
