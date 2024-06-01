@@ -1,0 +1,418 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+
+body {
+  width: 1366px;
+  /* background-color: #fffcf5; */
+  background-color: #4f4f4f;
+}
+
+.en {
+  font-family: din-2014, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+}
+
+/* 反映されない　</>の表示が出ないため
+グーグルフォントなら、
+Nothing You Could Do
+Oooh Baby
+のどちらかで*/
+.cursive {
+  font-family: adventures-unlimited, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* works3つの基準が白四角になっていてずれている
+ボタンの上が400の上と揃う必要がある */
+.wrapper {
+  height: 400px;
+}
+
+/* FV・左右固定デザイン */
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* 左固定デザイン */
+
+header div div:nth-child(1) {
+  width: 60px;
+  height: 800px;
+  background: #d6d6d6;
+  position: fixed;
+}
+
+header div p {
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+}
+
+header span {
+  color: #ec6c4e;
+}
+
+/* 右固定デザイン */
+
+/* まずは横書きでリストを横並びにすると２段になる
+それを２段のまま縦にするのでnavに縦書きを適応する */
+
+header div div:nth-child(2) {
+  width: 90px;
+  height: 800px;
+  background: #d6d6d6;
+  position: fixed;
+  right: 0px;
+}
+
+/* 上下200pxのmargin指定でとりあえず
+画面幅小さくなると耐えられないが上下中央にできない */
+nav {
+  writing-mode: vertical-rl;
+  height: 400px;
+  /* text-align: center; */
+  margin: 200px auto;
+  /* align-items: center; */
+  /* vertical-align: middle; */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  font-size: 16px;
+}
+
+/* なんか雰囲気違う！丸ゴシックの方がいいかも！ */
+h1 {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  letter-spacing: 0.2em;
+  margin: 104px auto auto 178px;
+}
+
+header > p {
+  font-family: din-2014, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.46em;
+  margin: 45px auto auto 724px;
+}
+
+/* わたしのこと */
+
+.about {
+  width: 768px;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 152px; */
+}
+
+.ttl {
+  position: relative;
+}
+
+h2 {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  writing-mode: vertical-rl;
+  /* margin: 36px auto auto 100px; */
+  padding: 30px 16px 68px;
+  border: 1px solid #ec6c4e;
+}
+
+.ttl p {
+  /* フォントが反映された場合
+  font-size: 30px;
+  line-height: 0.6; */
+  line-height: 1;
+  transform: rotate(-15deg);
+  /* Aboutme　以下で反映できる
+  Works・Contact　以下で画面右端に移動、
+  abusolute消すと表示したい周辺に戻る
+  同様のコピペだが .erase は以下で反映可 */
+  position: absolute;
+  bottom: 28px;
+  right: -35px;
+}
+
+.erase {
+  width: 10px;
+  height: 20px;
+  background: #fffcf5;
+  position: absolute;
+  top: 23px;
+  left: 70px;
+}
+
+.about_line {
+  width: 460px;
+  border-bottom: 1px solid #ec6c4e;
+  position: absolute;
+  top: 200px;
+  left: -440px;
+}
+
+/* .about_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.about_content div:nth-child(1) {
+  position: absolute;
+}
+
+.about_content img {
+  height: 400px;
+}
+
+.about_content div:nth-child(2) > p {
+  font-size: 13px;
+  line-height: 2;
+  width: 396px;
+}
+
+.about_content div:nth-child(2) {
+  position: relative;
+  top: 152px;
+  left: 330px;
+
+  /* text-align: right; */
+}
+
+.btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background: #ec6c4e;
+  /* padding-top: 27px; */
+  position: relative;
+}
+
+.btn p:nth-of-type(1) {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 20px;
+}
+
+/* 矢印の交差点のズレが気になる */
+.arrow_right {
+  width: 13px;
+  border-bottom: 1px solid #423732;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 74px;
+  left: 75px;
+}
+
+.arrow_bottom {
+  width: 54px;
+  height: 20px;
+  border-bottom: 1px solid #423732;
+  margin: 0 auto;
+}
+
+.btn p:nth-of-type(2) {
+  text-align: center;
+  font-size: 8px;
+  margin-top: 8px;
+}
+
+/* つくったもの_共通 */
+
+.works_line {
+  width: 460px;
+  border-bottom: 1px solid #ec6c4e;
+  position: absolute;
+  top: 200px;
+  left: -440px;
+}
+
+h3 {
+  font-family: athelas, serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+}
+
+/* WEBSITE */
+
+.hp_square {
+  width: 630px;
+  height: 288px;
+  background-color: #fff;
+  margin: 77px auto auto 129px;
+  position: relative;
+  z-index: 10;
+}
+
+/* font-family反映されない　</>の表示が出ない
+AdobeフォントでWebプロジェクトに追加するボタンがない */
+
+.hp_square h3 {
+  width: 285px;
+
+  position: absolute;
+  top: 207px;
+  left: -142px;
+  border-bottom: solid 1px #ec6c4e;
+  z-index: 100;
+}
+
+.hp_img {
+  height: 300px;
+  position: absolute;
+  top: -27px;
+  left: 132px;
+}
+
+.hp_square a {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: -70px;
+  right: -555px;
+}
+/* LANDINGPAGE */
+
+.lp_square {
+  width: 427px;
+  height: 285px;
+  background-color: #fff;
+  margin: 77px auto auto 129px;
+  position: relative;
+  z-index: 20;
+}
+
+.lp_square h3 {
+  width: 426px;
+  position: absolute;
+  top: 207px;
+  left: -200px;
+  border-bottom: solid 1px #ec6c4e;
+  z-index: 200;
+}
+
+.lp_img {
+  width: 173px;
+  /* height: 300px; */
+  position: absolute;
+  top: -27px;
+  left: 220px;
+}
+
+.lp_square a {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: -70px;
+  right: -355px;
+}
+
+/* BANNER */
+
+.bn_square {
+  width: 427px;
+  height: 285px;
+  background-color: #fff;
+  margin: 77px auto auto 129px;
+  position: relative;
+  z-index: 30;
+}
+
+.bn_square h3 {
+  width: 243px;
+  position: absolute;
+  top: 207px;
+  left: -121px;
+  border-bottom: solid 1px #ec6c4e;
+  z-index: 300;
+}
+
+.bn_img {
+  width: 300px;
+  /* height: 300px; */
+  position: absolute;
+  top: -27px;
+  left: 121px;
+}
+
+.bn_square a {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: -70px;
+  right: -385px;
+}
+
+/* CONTACT */
+
+.contact_line {
+  width: 460px;
+  border-bottom: 1px solid #ec6c4e;
+  position: absolute;
+  top: 200px;
+  left: -440px;
+}
+
+form {
+  position: relative;
+}
+
+.contact-table {
+  /* width: 100%; */
+  width: 807px;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: left;
+  width: 20%;
+}
+
+td {
+  width: 80%;
+  padding-bottom: 15px;
+}
+
+/* td :nth-of-type(n + 1) {
+  padding-top: 15px;
+} */
+
+input {
+  width: 630px;
+  height: 50px;
+}
+
+textarea {
+  width: 630px;
+  height: 242px;
+}
+
+.submit {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  position: absolute;
+  top: 280px;
+}
