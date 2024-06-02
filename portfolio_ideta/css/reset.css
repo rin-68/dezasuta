@@ -17,7 +17,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  line-height: 2;
+  /* line-height: 2; */
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #423732;
   font-family: zen-maru-gothic, "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
