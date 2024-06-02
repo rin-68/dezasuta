@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IdetaKaori's Portfolio</title>
+    <link href="
+    https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+    " rel="stylesheet">
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script>
@@ -20,35 +24,36 @@
 </head>
 
 <body>
-    <header class="wrapper">
-        <!-- <div>
-            <div>
-                <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
-            </div>
-            <div>
-                <nav>
-                    <li>
-                        <ul class="en"><a href="">TOP</a></ul>
-                        <ul class="en"><a href="">ABOUT ME</a></ul>
-                        <ul class="en"><a href="">CONTACT</a></ul>
-                    </li>
+    <!-- <div>
+        <div>
+            <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
+        </div>
+        <div>
+            <nav>
+                <li>
+                    <ul class="en"><a href="">TOP</a></ul>
+                    <ul class="en"><a href="">ABOUT ME</a></ul>
+                    <ul class="en"><a href="">CONTACT</a></ul>
+                </li>
 
-                    <li>
-                        <ul class="en"><a href="">HP</a></ul>
-                        <ul class="en"><a href="">LP</a></ul>
-                        <ul class="en"><a href="">BANNER</a></ul>
-                        <ul class="en"><a href="">WORKS</a></ul>
-                    </li>
-                </nav>
-            </div>
-        </div> -->
+                <li>
+                    <ul class="en"><a href="">HP</a></ul>
+                    <ul class="en"><a href="">LP</a></ul>
+                    <ul class="en"><a href="">BANNER</a></ul>
+                    <ul class="en"><a href="">WORKS</a></ul>
+                </li>
+            </nav>
+        </div>
+    </div> -->
+    <main data-scroll-container>
+        <section data-scroll-section class="header wrapper scroll_section">
 
-        <h1>あなたの想いを、開花させる。</h1>
-        <p>WEB DESIGN</p>
-        <img src="./images/FV_img.png" alt="花の画像">
-    </header>
-    <main>
-        <section class="wrapper">
+
+            <h1>あなたの想いを、開花させる。</h1>
+            <p>WEB DESIGN</p>
+            <img src="./images/FV_img.png" alt="花の画像">
+        </section>
+        <section data-scroll-section class="wrapper scroll_section">
             <div class="about">
                 <div class="ttl">
                     <h2>わたしのこと</h2>
@@ -75,9 +80,9 @@
                     </div>
                 </div>
             </div>
-            <!-- <img src="./images/flower00.png" alt=""> -->
+            <!-- <img src="./images/flower001.png" alt=""> -->
         </section>
-        <section class="works">
+        <section data-scroll-section class="works scroll_section">
             <div class="wrapper">
                 <div class="ttl">
                     <h2>つくったもの</h2>
@@ -104,7 +109,7 @@
                     </a>
                 </div>
             </div>
-            <!-- <img src="./images/flower01.png" alt="一輪の花の画像"> -->
+            <!-- <img src="./images/flower002.png" alt="一輪の花の画像"> -->
 
             <div class="wrapper">
                 <div class="lp_square">
@@ -124,7 +129,7 @@
 
 
             </div>
-            <!-- <img src="./images/flower02.png" alt="二輪の花の画像"> -->
+            <!-- <img src="./images/flower003.png" alt="二輪の花の画像"> -->
 
             <div class="wrapper">
                 <div class="bn_square">
@@ -144,9 +149,9 @@
 
 
             </div>
-            <!-- <img src="./images/flower03.png" alt="三輪の花の画像"> -->
+            <!-- <img src="./images/flower004.png" alt="三輪の花の画像"> -->
         </section>
-        <section>
+        <section data-scroll-section class="scroll_section">
             <div class="ttl wrapper">
                 <h2>おはなしする</h2>
                 <p class="cursive">Contact</p>
@@ -183,6 +188,21 @@
 
         </section>
     </main>
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+    <script>
+        (() => {
+            document.addEventListener('DOMContentLoaded', () => {
+                new LocomotiveScroll({
+                    el: document.querySelector('[data-scroll-container]'),
+                    direction: 'horizontal',
+                    smooth: true,
+                })
+            })
+        })()
+
+    </script>
 
 </body>
 
