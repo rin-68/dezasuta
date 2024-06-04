@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+  /* width: 1366px; */
+  /* background-color: #fffcf5; */
+  background-color: #919191;
+}
+
+/* works3つの基準が白四角になっていてずれている
+  ボタンの上が400の上と揃う必要がある
+  →あとで調整 */
+.wrapper {
+  height: 400px;
+}
+
+.scroll_section {
+  width: 100vw;
+  height: 100%;
+}
+
+/* ---------- フォント ---------- */
+
+.en {
+  font-family: din-2014, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+}
+
+.cursive {
+  font-family: adventures-unlimited, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ec6c4e;
+  text-align: right;
+}
+
+/* ---------- 左 固定デザイン---------- */
+
+.portfolioname {
+  width: 60px;
+  height: 100vh;
+  background: #d6d6d6;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10001;
+}
+
+.portfolioname p {
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+}
+
+.portfolioname span {
+  color: #ec6c4e;
+}
+
+/* ----------右 固定デザイン---------- */
+
+/* まずは横書きでリストを横並びにすると２段になる
+  それを２段のまま縦にするのでnavに縦書きを適応する */
+
+header {
+  width: 90px;
+  height: 100vh;
+  background: #d6d6d6;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10000;
+  display: flex; /* Flexboxを使用 */
+  justify-content: center; /* 水平方向の中央寄せ */
+  align-items: center; /* 垂直方向の中央寄せ */
+}
+
+/* 上下200pxのmargin指定でとりあえず
+  画面幅小さくなると耐えられないが上下中央にできない */
+nav {
+  writing-mode: vertical-rl;
+  min-height: 400px;
+  /* display: flex; Flexboxを使用 */
+  /* flex-direction: column; 縦方向に配置 */
+  /* justify-content: center; 内部のアイテムを中央に配置 */
+  /* align-items: center; 内部のアイテムを中央に配置 */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  font-size: 16px;
+}

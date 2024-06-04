@@ -1,41 +1,6 @@
 @charset "UTF-8";
 
-/* ーーー 共通部分 ーーー */
-
-body {
-  width: 1366px;
-  /* background-color: #fffcf5; */
-  background-color: #919191;
-}
-
-/* works3つの基準が白四角になっていてずれている
-ボタンの上が400の上と揃う必要がある */
-.wrapper {
-  height: 400px;
-}
-
-.scroll_section {
-  width: 100vw;
-  height: 100%;
-}
-
-.en {
-  font-family: din-2014, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.2em;
-}
-
-.cursive {
-  font-family: adventures-unlimited, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #ec6c4e;
-  text-align: right;
-}
-
-/* ボタン「もっと知りたい」 */
+/* ---------- ボタン「もっと知りたい」 ---------- */
 
 .btn {
   width: 120px;
@@ -43,7 +8,6 @@ body {
   border-radius: 60px;
   background: #fff;
   border: 1px solid #53c711;
-  /* padding-top: 27px; */
   position: relative;
 }
 
@@ -55,7 +19,6 @@ body {
 }
 
 /* 矢印の交差点のズレが気になる */
-/* ABOUTMEの部分だけどっかいく */
 .arrow_right {
   width: 13px;
   border-bottom: 1px solid #423732;
@@ -78,63 +41,13 @@ body {
   margin-top: 8px;
 }
 
-/* FV・左右固定デザイン */
+/* ---------- FV ---------- */
 
-.header div {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
-}
-
-/* 左固定デザイン */
-
-.header div div:nth-child(1) {
-  width: 60px;
-  height: 800px;
-  background: #d6d6d6;
-  position: fixed;
-}
-
-.header div p {
-  writing-mode: vertical-rl;
-  margin: 0 auto;
-}
-
-.header span {
-  color: #ec6c4e;
-}
-
-/* 右固定デザイン */
-
-/* まずは横書きでリストを横並びにすると２段になる
-それを２段のまま縦にするのでnavに縦書きを適応する */
-
-.header div div:nth-child(2) {
-  width: 90px;
-  height: 800px;
-  background: #d6d6d6;
-  position: fixed;
-  right: 0px;
-}
-
-/* 上下200pxのmargin指定でとりあえず
-画面幅小さくなると耐えられないが上下中央にできない */
-nav {
-  writing-mode: vertical-rl;
-  height: 400px;
-  /* text-align: center; */
-  margin: 200px auto;
-  /* align-items: center; */
-  /* vertical-align: middle; */
-}
-
-li {
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  font-size: 16px;
+.fv {
+  display: flex; /* これがないと中央配置できないのはなぜ？ */
+  height: 100%;
+  /* width: 100vh; */
+  align-items: center;
 }
 
 h1 {
@@ -143,10 +56,10 @@ h1 {
   font-weight: 400;
   font-size: 56px;
   letter-spacing: 0.2em;
-  margin: 104px auto auto 178px;
+  margin: 66px auto auto 178px;
 }
 
-.header > p {
+.fv p {
   font-family: din-2014, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -155,18 +68,20 @@ h1 {
   margin: 8px auto auto 668px;
 }
 
-.header img {
+.fv img {
   margin: 7px auto auto 114px;
   /* margin-left: 114px; */
 }
 
-/* わたしのこと */
+/* ---------- わたしのこと ---------- */
 
 .about {
-  width: 768px;
+  width: 560px;
   display: flex;
   justify-content: space-between;
   /* gap: 152px; */
+  height: 100%;
+  align-items: center;
 }
 
 .ttl {
@@ -204,11 +119,11 @@ h2 {
 }
 
 .about_line {
-  width: 460px;
+  width: 486px;
   border-bottom: 1px solid #ec6c4e;
   position: absolute;
   top: 200px;
-  left: -440px;
+  left: -471px;
 }
 
 .about_content div:nth-child(1) {
@@ -222,18 +137,30 @@ h2 {
 .about_content div:nth-child(2) > p {
   font-size: 13px;
   line-height: 2;
-  width: 396px;
+  text-align: justify;
+  max-width: 396px;
 }
 
 .about_content > div:nth-child(2) {
+  /* div複数あるので直下にしないと違うところにもかかる */
   position: relative;
   top: 152px;
   left: 330px;
-
-  /* text-align: right; */
 }
 
-/* つくったもの_共通 */
+/* ---------- つくったもの 共通 ---------- */
+
+.works {
+  width: 3000px;
+}
+
+.works_wrapper {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 30px; */
+  height: 100%;
+  align-items: center;
+}
 
 .works_line {
   width: 460px;
@@ -256,13 +183,13 @@ h3 {
   text-align: right;
 }
 
-/* WEBSITE */
+/* ---------- WEBSITE ---------- */
 
 .hp_square {
   width: 630px;
   height: 288px;
   background-color: #fff;
-  margin: 71px auto auto 129px;
+  margin: 71px auto auto 180px;
   position: relative;
   z-index: 10;
 }
@@ -292,13 +219,13 @@ h3 {
   top: -70px;
   right: -555px;
 }
-/* LANDINGPAGE */
+/* ---------- LANDINGPAGE ---------- */
 
 .lp_square {
   width: 427px;
   height: 285px;
   background-color: #fff;
-  margin: 77px auto auto 129px;
+  margin: 77px auto auto 430px;
   position: relative;
   z-index: 20;
 }
@@ -329,13 +256,13 @@ h3 {
   right: -355px;
 }
 
-/* BANNER */
+/* ---------- BANNER ---------- */
 
 .bn_square {
   width: 427px;
   height: 285px;
   background-color: #fff;
-  margin: 77px auto auto 129px;
+  margin: 77px auto auto 450px;
   position: relative;
   z-index: 30;
 }
@@ -366,7 +293,13 @@ h3 {
   right: -369px;
 }
 
-/* CONTACT */
+/* ---------- CONTACT ---------- */
+
+.contact {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
 
 .contact_line {
   width: 460px;
