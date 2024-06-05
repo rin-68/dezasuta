@@ -1,9 +1,22 @@
 @charset "UTF-8";
 
-/* ---------- 共通 タイトル ---------- */
+/* ---------- 共通 ---------- */
+
+.profile,
+.history,
+.skills,
+.strength,
+.love,
+.design {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+/* ---------- 共通 セクションタイトル ---------- */
 
 .ttl {
-  width: 74px;
+  width: 60px;
   border: 1px solid #ec6c4e;
   position: relative;
 }
@@ -15,11 +28,10 @@ h2 {
   font-size: 20px;
   letter-spacing: 0.2em;
   writing-mode: vertical-rl;
+  font-feature-settings: initial;
   position: absolute;
   top: 25px;
-  left: 15px;
-  /* padding: 30px 16px 68px;
-  border: 1px solid #ec6c4e; */
+  left: 17px;
 }
 
 .ttl p {
@@ -28,8 +40,6 @@ h2 {
   letter-spacing: 0.12em;
   transform: rotate(-15deg);
   position: absolute;
-  /* top: 189px;
-  left: 33px; */
   bottom: 40px;
   right: -50px;
 }
@@ -40,23 +50,24 @@ h2 {
   background: #fffcf5;
   position: absolute;
   top: 23px;
-  left: 70px;
+  left: 56px;
 }
 
-.profile_line {
+.ttl_line {
   width: 486px;
   border-bottom: 1px solid #ec6c4e;
   position: absolute;
-  /* top: 200px;
-  left: -471px; */
   bottom: 38px;
   right: 50px;
+}
+
+.history .ttl_line {
+  width: 200px;
 }
 
 /* ---------- profile ---------- */
 
 .profile {
-  display: flex;
   margin-left: 150px;
 }
 
@@ -68,15 +79,25 @@ h2 {
   margin-left: 130px;
 }
 
-.profile > div:nth-of-type(3) {
+.profile > div:nth-of-type(4) {
   margin-left: 300px;
 }
 
-.profile_txt {
+.profile .txt {
+  width: 590px;
+}
+
+.profile .txt p {
   width: 590px;
   line-height: 1.7;
   text-align: justify;
 }
+
+/* .bg_img {
+  background-image: url(../images/flower01.png);
+  height: 300px;
+  width: 300px;
+} */
 
 .profile div:nth-of-type(3) p:nth-of-type(2) {
   font-size: 18px;
@@ -86,8 +107,8 @@ h2 {
 /* ---------- history ---------- */
 
 .history {
-  display: flex;
   gap: 116px;
+  margin-left: 900px;
 }
 
 .history .ttl {
@@ -173,15 +194,35 @@ h3 {
   margin: 0 auto;
 }
 
-/* ---------- 使えるスキル ---------- */
+/* ---------- skills ---------- */
+
+.skills {
+  margin-left: 40px;
+}
 
 .skills .ttl {
   height: 263px;
 }
 
-.skills .content {
-  display: flex;
-  align-items: center;
+.skills table:nth-of-type(1) {
+  margin-left: 85px;
+}
+
+.skills table:nth-of-type(2) {
+  margin-left: 42px;
+}
+
+table {
+  margin-top: 30px;
+}
+
+th {
+  padding-right: 25px;
+}
+
+td {
+  height: 68px;
+  padding-right: 10px;
 }
 
 .skills .first,
@@ -208,18 +249,15 @@ h3 {
   width: 40px;
 }
 
-.skills .content div:nth-of-type(2) {
-  margin-left: 25px;
-}
-.skills .content div:nth-of-type(3) {
-  margin-left: 15px;
-}
-
 .skills .icon {
   width: 73px;
 }
 
-.skills .content > div:nth-of-type(3) p {
+.skills .icon_name {
+  font-family: din-2014, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
   letter-spacing: normal;
 }
 
@@ -233,20 +271,60 @@ h3 {
   width: 54px;
 }
 
-/* ---------- 得意なこと ---------- */
+/* ---------- 共通 strength love design ---------- */
 
-.sterength .ttl {
-  height: 385px;
+.strength,
+.love,
+.design {
+  margin-left: 40px;
 }
 
-/* ---------- 好きなこと ---------- */
+.strength .contents,
+.love .contents,
+.design .contents {
+  margin-left: 84px;
+}
+
+.strength .content,
+.love .content,
+.design .content {
+  display: flex;
+}
+
+.strength .content:nth-of-type(n + 2),
+.love .content:nth-of-type(n + 2),
+.design .content:nth-of-type(n + 2) {
+  margin-top: 37px;
+}
+
+.check {
+  width: 28px;
+  margin-right: 20px;
+}
+
+/* ---------- strength ---------- */
+
+.strength .ttl {
+  height: 227px;
+}
+
+.strength .contents > p:nth-of-type(1) {
+  margin-top: 78px;
+}
+
+.strength .contents > p:nth-of-type(2) {
+  width: 272px;
+  margin-top: 32px;
+}
+
+/* ---------- love ---------- */
 
 .love .ttl {
-  height: 385px;
+  height: 223px;
 }
 
-/* ---------- 好きなデザイン ---------- */
+/* ---------- design ---------- */
 
 .design .ttl {
-  height: 385px;
+  height: 263px;
 }
