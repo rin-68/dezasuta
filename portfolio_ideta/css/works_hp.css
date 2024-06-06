@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+main > section:nth-of-type(1) {
+  background-image: url(../images/bg_1-80.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
 .contents {
   display: flex;
   width: 1800px;

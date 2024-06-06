@@ -128,6 +128,7 @@ h2 {
 
 h3 {
   letter-spacing: 0.18em;
+  writing-mode: vertical-rl;
   color: #fffcf5;
   width: 27px;
   height: 86px;
