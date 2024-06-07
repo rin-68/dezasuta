@@ -8,7 +8,11 @@ main > section:nth-of-type(1) {
 
 .contents {
   display: flex;
+  height: 100%;
+  align-items: center;
+
   width: 1800px;
+  margin-left: 80px;
 }
 
 .content {

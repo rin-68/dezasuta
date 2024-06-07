@@ -88,16 +88,13 @@ h2 {
 }
 
 .profile .txt p {
+  /* display: block; */
+  /* display: inline-block; */
+  /* word-break: break-all; */
   width: 590px;
   line-height: 1.7;
   text-align: justify;
 }
-
-/* .bg_img {
-  background-image: url(../images/flower01.png);
-  height: 300px;
-  width: 300px;
-} */
 
 .profile div:nth-of-type(3) p:nth-of-type(2) {
   font-size: 18px;
@@ -201,6 +198,10 @@ h3 {
   margin-left: 40px;
 }
 
+.skills > div {
+  display: flex;
+}
+
 .skills .ttl {
   height: 263px;
 }
@@ -214,6 +215,7 @@ h3 {
 }
 
 table {
+  /* height: 400px; */
   margin-top: 30px;
 }
 
@@ -278,6 +280,11 @@ td {
 .love,
 .design {
   margin-left: 40px;
+}
+.strength > div,
+.love > div,
+.design > div {
+  display: flex;
 }
 
 .strength .contents,

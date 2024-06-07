@@ -46,7 +46,8 @@
 .fv {
   display: flex; /* これがないと中央配置できないのはなぜ？ */
   height: 100%;
-  /* width: 100vh; */
+  /* width: 1366px; */
+  width: 100vh;
   align-items: center;
 }
 
@@ -228,9 +229,24 @@ h3 {
 }
 /* ---------- LANDINGPAGE ---------- */
 
+/* これを適応すると要素が左にズレて、縦幅基準の正方形になる*/
 /* .lp {
   width: 100vh;
 } */
+
+/* 背景画像を指定するとsectionが中央配置されなくなる 
+→height指定しているから
+→heightなしだと400pxが適応されている
+→wrapperを下に動かす、div追加
+→意味ない（上に400、下に花の画像）
+→works全体に対して中央配置がかかっていて背景画像も含まれているから
+→works外に出してsectionに背景画像を適応するとレスポンシブズレないのか？*/
+.lp {
+  background-image: url(../images/flower02.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 
 .lp_square {
   width: 427px;
