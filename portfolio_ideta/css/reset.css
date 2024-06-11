@@ -27,6 +27,7 @@ li {
   font-weight: 400;
   font-size: 14px;
   font-feature-settings: "palt" 1;
+  white-space: normal;
 }
 
 a {

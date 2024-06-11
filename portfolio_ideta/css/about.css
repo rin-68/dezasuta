@@ -17,8 +17,9 @@
 
 .ttl {
   width: 60px;
-  border: 1px solid #ec6c4e;
+  /* border: 1px solid #ec6c4e; */
   position: relative;
+  margin-left: 90px;
 }
 
 h2 {
@@ -29,9 +30,11 @@ h2 {
   letter-spacing: 0.2em;
   writing-mode: vertical-rl;
   font-feature-settings: initial;
-  position: absolute;
+  border: 1px solid #ec6c4e;
+  padding: 30px 14px 68px;
+  /* position: absolute;
   top: 25px;
-  left: 17px;
+  left: 17px; */
 }
 
 .ttl p {
@@ -41,7 +44,8 @@ h2 {
   transform: rotate(-15deg);
   position: absolute;
   bottom: 40px;
-  right: -50px;
+  /* right: -50px; */
+  left: 22px;
 }
 
 .erase {
@@ -68,37 +72,54 @@ h2 {
 /* ---------- profile ---------- */
 
 .profile {
-  margin-left: 150px;
+  /* width: 100%; */
+  /* width: 100vw; */
+  background-image: url(../images/flower00.png);
+  background-repeat: no-repeat;
+  background-position: 1000px bottom;
+}
+
+.profile > div {
+  display: flex;
 }
 
 .profile .ttl {
+  /* width: 400px; */
+
   height: 300px;
+  margin-left: 11%;
 }
 
-.profile > div:nth-of-type(2) {
-  margin-left: 130px;
+.profile > div > div:nth-of-type(2) {
+  margin-left: 11%;
+
+  /* flex-grow: 2; */
 }
 
-.profile > div:nth-of-type(4) {
+/* .profile > div:nth-of-type(4) {
   margin-left: 300px;
-}
+} */
 
 .profile .txt {
   width: 590px;
 }
 
 .profile .txt p {
-  /* display: block; */
-  /* display: inline-block; */
-  /* word-break: break-all; */
   width: 590px;
   line-height: 1.7;
   text-align: justify;
 }
 
-.profile div:nth-of-type(3) p:nth-of-type(2) {
+.profile > div > div:nth-of-type(3) {
+  margin-left: 12%;
+
+  /* flex-grow: 1; */
+}
+
+.profile > div > div:nth-of-type(3) p:nth-of-type(2) {
   font-size: 18px;
   color: #ec6c4e;
+  width: 620px;
   margin-top: 95px;
 }
 /* ---------- history ---------- */
@@ -109,7 +130,7 @@ h2 {
 }
 
 .history .ttl {
-  height: 385px;
+  height: 388px;
 }
 
 .history .contents {
@@ -334,5 +355,5 @@ td {
 /* ---------- design ---------- */
 
 .design .ttl {
-  height: 263px;
+  height: 268px;
 }

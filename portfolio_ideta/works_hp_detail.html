@@ -136,49 +136,49 @@
             </div>
         </section>
         <section data-scroll-section class="scroll_section">
+            <div class="all">
+                <div class="allpage">
+                    <p class="en">ALL PAGES</p>
+                    <div>
+                        <img src="./images/hp_cafe_2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_4.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_5.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_6.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_7.jpg" alt="">
+                    </div>
+                    <p class="en">RESPONSIVE</p>
 
-            <div class="allpage">
-                <p class="en">ALL PAGES</p>
-                <div>
-                    <img src="./images/hp_cafe_2.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/hp_cafe_3.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/hp_cafe_4.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/hp_cafe_5.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/hp_cafe_6.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/hp_cafe_7.jpg" alt="">
-                </div>
-                <p class="en">RESPONSIVE</p>
+                    <div>
+                        <img src="./images/hp_cafe_8.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_9.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/hp_cafe_10.jpg" alt="">
+                    </div>
 
-                <div>
-                    <img src="./images/hp_cafe_8.jpg" alt="">
                 </div>
-                <div>
-                    <img src="./images/hp_cafe_9.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/hp_cafe_10.jpg" alt="">
-                </div>
-
-            </div>
-            <div class="wrapper">
+                <!-- <div class="wrapper"> -->
                 <a href="">
                     <div class="btn">
                         <p class="en">CONTACT</p>
                         <img src="./images/mail.svg">
                     </div>
                 </a>
+                <!-- </div> -->
             </div>
-
         </section>
     </main>
 
@@ -193,6 +193,17 @@
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
+                    tablet: {
+                        direction: 'horizontal',
+                        smooth: true,
+
+                    },
+                    mobile: {
+                        direction: 'horizontal',
+                        smooth: true,
+
+                    }
+
                 })
             })
         })()

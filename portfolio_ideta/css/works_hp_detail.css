@@ -137,6 +137,10 @@ h2 {
   margin-left: 40px;
 }
 
+.all {
+  display: flex;
+}
+
 .allpage {
   width: 4000px;
   display: flex;

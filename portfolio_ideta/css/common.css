@@ -2,6 +2,7 @@
 
 body {
   /* width: 1366px; */
+  width: 100vw;
   background-color: #fffcf5;
   /* background-color: #919191; */
 }
@@ -46,7 +47,8 @@ main > section:nth-of-type(1) {
 /* ---------- 左 固定デザイン---------- */
 
 .portfolioname {
-  width: 60px;
+  width: 4%;
+  /* width: 60px; */
   height: 100vh;
   background: #fffcf5;
   position: fixed;
@@ -64,13 +66,20 @@ main > section:nth-of-type(1) {
   color: #ec6c4e;
 }
 
+/* @media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 30px;
+  }
+} */
+
 /* ----------右 固定デザイン---------- */
 
 /* まずは横書きでリストを横並びにすると２段になる
   それを２段のまま縦にするのでnavに縦書きを適応する */
 
 header {
-  width: 90px;
+  width: 6%;
+  /* width: 90px; */
   height: 100vh;
   background: #fffcf5;
   position: fixed;

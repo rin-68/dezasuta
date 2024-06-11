@@ -46,8 +46,7 @@
 .fv {
   display: flex; /* これがないと中央配置できないのはなぜ？ */
   height: 100%;
-  /* width: 1366px; */
-  width: 100vh;
+  width: 100vw;
   align-items: center;
 }
 
@@ -60,13 +59,21 @@ h1 {
   margin: 66px auto auto 178px;
 }
 
+.fv > div > div {
+  width: 260px;
+  height: 30px;
+  background: #53c711;
+  margin: 34px auto auto 64%;
+  z-index: 400;
+}
+
 .fv p {
   font-family: din-2014, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   letter-spacing: 0.46em;
-  margin: 8px auto auto 668px;
+  padding-left: 25px;
 }
 
 .fv img {
@@ -74,20 +81,40 @@ h1 {
   /* margin-left: 114px; */
 }
 
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 33px;
+    margin-top: 106px;
+  }
+
+  .fv p {
+    font-size: 14px;
+  }
+}
+
 /* ---------- わたしのこと ---------- */
 
 .about {
-  width: 100vh;
-  /* width: 560px; */
+  background-image: url(../images/flower00.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  width: 990px;
+  /* width: 100vw; */
   display: flex;
   justify-content: space-between;
-  /* gap: 152px; */
   height: 100%;
   align-items: center;
+  margin-left: 12%;
+}
+
+.about > div {
+  display: flex;
 }
 
 .ttl {
   position: relative;
+  margin-right: 90px;
 }
 
 h2 {
@@ -98,8 +125,8 @@ h2 {
   letter-spacing: 0.2em;
   writing-mode: vertical-rl;
   font-feature-settings: initial;
-
-  padding: 30px 16px 68px;
+  /* margin-right: 15px; */
+  padding: 30px 14px 68px;
   border: 1px solid #ec6c4e;
 }
 
@@ -111,6 +138,7 @@ h2 {
   position: absolute;
   top: 189px;
   left: 33px;
+  z-index: 100;
 }
 
 .erase {
@@ -122,61 +150,104 @@ h2 {
   left: 70px;
 }
 
-.about_line {
-  width: 486px;
+.ttl_line {
+  width: 1740%;
   border-bottom: 1px solid #ec6c4e;
   position: absolute;
   top: 200px;
-  left: -471px;
+  left: -1700%;
+  z-index: 40;
 }
 
-.about_content div:nth-child(1) {
-  position: absolute;
-}
-
-.about_content img {
-  height: 400px;
-}
-
-.about_content div:nth-child(2) > p {
-  font-size: 13px;
-  line-height: 2;
-  text-align: justify;
-  max-width: 396px;
+.about_content {
+  width: 1000px;
+  position: relative;
 }
 
 .about_content > div:nth-child(2) {
   /* div複数あるので直下にしないと違うところにもかかる */
-  position: relative;
-  top: 152px;
-  left: 330px;
+  position: absolute;
+  top: 0px;
+  left: 278px;
+}
+
+.about_content img {
+  height: 400px;
+  z-index: 10;
+}
+
+.txt_bg {
+  width: 387px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 41% 59% 39% 61% / 46% 53% 47% 54%;
+  filter: drop-shadow(3px 3px 8px #e9e9e9);
+}
+
+.txt_bg div {
+  margin-top: 50px;
+}
+
+.about_content .txt {
+  font-size: 13px;
+  line-height: 2;
+  text-align: justify;
+  width: 273px;
+  height: 300px;
+  padding-top: 20%;
+  padding-left: 15%;
+}
+
+.about a {
+  position: absolute;
+  top: 277px;
+  left: 230px;
+}
+
+@media screen and (max-width: 1100px) {
+  .ttl {
+    margin-right: 28px;
+  }
+
+  .about_content > div:nth-child(2) {
+    left: 245px;
+  }
+
+  .txt_bg {
+    width: 322px;
+    height: 249px;
+  }
+
+  .about_content .txt {
+    padding-top: 16%;
+    padding-left: 9%;
+  }
+
+  .about a {
+    left: 200px;
+  }
 }
 
 /* ---------- つくったもの 共通 ---------- */
 
-.works {
-  width: 3000px;
-}
+/* .works {
+  width: 5000px;
+} */
 
-.works_wrapper {
+.works {
   display: flex;
-  /* justify-content: space-between; */
-  /* gap: 30px; */
   height: 100%;
   align-items: center;
+  padding-left: 9%;
 }
 
 .works_line {
-  width: 460px;
+  width: 505%;
   border-bottom: 1px solid #ec6c4e;
   position: absolute;
   top: 200px;
-  left: -440px;
+  left: -470%;
 }
-
-/* .works .wrapper {
-  padding-top: 71px;
-} */
 
 h3 {
   font-family: athelas, serif;
@@ -187,27 +258,43 @@ h3 {
   text-align: right;
 }
 
+@media screen and (max-width: 1100px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
 /* ---------- WEBSITE ---------- */
 
 /* .hp {
   width: 100vh;
 } */
 
+.hp {
+  background-image: url(../images/flower02.png);
+  width: 1200px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  display: flex;
+  align-items: center;
+}
+
 .hp_square {
   width: 630px;
   height: 288px;
   background-color: #fff;
-  margin: 71px auto auto 180px;
+  margin: 71px 180px auto auto;
   position: relative;
   z-index: 10;
 }
 
 .hp_square h3 {
-  width: 285px;
+  width: 222px;
 
   position: absolute;
   top: 207px;
-  left: -142px;
+  left: -77px;
   border-bottom: solid 1px #ec6c4e;
   z-index: 100;
 }
@@ -227,6 +314,35 @@ h3 {
   top: -70px;
   right: -555px;
 }
+
+@media screen and (max-width: 1100px) {
+  .hp {
+    width: 755px;
+    background-size: 160px;
+  }
+
+  .hp_square {
+    width: 550px;
+  }
+  .hp_square h3 {
+    width: 140px;
+
+    position: absolute;
+    top: 207px;
+    left: -15px;
+    border-bottom: solid 1px #ec6c4e;
+    z-index: 100;
+  }
+
+  .hp_img {
+    left: 85px;
+  }
+
+  .hp_square a {
+    right: -460px;
+  }
+}
+
 /* ---------- LANDINGPAGE ---------- */
 
 /* これを適応すると要素が左にズレて、縦幅基準の正方形になる*/
@@ -243,25 +359,35 @@ h3 {
 →works外に出してsectionに背景画像を適応するとレスポンシブズレないのか？*/
 .lp {
   background-image: url(../images/flower02.png);
+  width: 700px;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: right bottom;
+  display: flex;
+  align-items: center;
+  /* margin-left: 11%; */
+  padding-left: 13%;
+}
+
+.lp > div {
+  display: flex;
+  align-items: center;
 }
 
 .lp_square {
   width: 427px;
   height: 285px;
   background-color: #fff;
-  margin: 77px auto auto 430px;
+  margin: 77px 430px auto auto;
   position: relative;
   z-index: 20;
 }
 
 .lp_square h3 {
-  width: 426px;
+  width: 660px;
   position: absolute;
   top: 207px;
-  left: -193px;
+  left: -95%;
   border-bottom: solid 1px #ec6c4e;
   z-index: 200;
 }
@@ -283,22 +409,51 @@ h3 {
   right: -355px;
 }
 
+@media screen and (max-width: 1100px) {
+  .lp {
+    width: 590px;
+    background-size: 140px;
+    margin-left: 9%;
+  }
+
+  .lp_square h3 {
+    width: 600px;
+    left: -87%;
+  }
+}
+
 /* ---------- BANNER ---------- */
+
+.bn {
+  background-image: url(../images/flower02.png);
+  width: 660px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  display: flex;
+  align-items: center;
+  padding-left: 12%;
+}
+
+.bn > div {
+  display: flex;
+  align-items: center;
+}
 
 .bn_square {
   width: 427px;
   height: 285px;
   background-color: #fff;
-  margin: 77px auto auto 450px;
+  margin: 77px 450px auto auto;
   position: relative;
   z-index: 30;
 }
 
 .bn_square h3 {
-  width: 243px;
+  width: 420px;
   position: absolute;
   top: 207px;
-  left: -131px;
+  left: -70%;
   border-bottom: solid 1px #ec6c4e;
   z-index: 300;
 }
@@ -324,8 +479,12 @@ h3 {
 
 .contact {
   display: flex;
+  width: 960px;
   height: 100%;
   align-items: center;
+  /* padding-right: 100px; */
+  /* margin-right: 100px; */
+  padding-left: 80%;
 }
 
 .contact_line {
