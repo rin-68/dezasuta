@@ -13,13 +13,32 @@
   align-items: center;
 }
 
+.profile .wrapper,
+.history .wrapper,
+.skills .wrapper,
+.strength .wrapper,
+.love .wrapper,
+.design .wrapper {
+  display: flex;
+}
+
+.profile .first_contents,
+.profile .second_contents,
+.history .top_contents,
+.skills .top_contents,
+.strength .top_contents,
+.love .top_contents,
+.design .top_contents {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
 /* ---------- 共通 セクションタイトル ---------- */
 
 .ttl {
   width: 60px;
-  /* border: 1px solid #ec6c4e; */
   position: relative;
-  margin-left: 90px;
 }
 
 h2 {
@@ -31,10 +50,7 @@ h2 {
   writing-mode: vertical-rl;
   font-feature-settings: initial;
   border: 1px solid #ec6c4e;
-  padding: 30px 14px 68px;
-  /* position: absolute;
-  top: 25px;
-  left: 17px; */
+  padding: 21px 14px 68px;
 }
 
 .ttl p {
@@ -44,7 +60,6 @@ h2 {
   transform: rotate(-15deg);
   position: absolute;
   bottom: 40px;
-  /* right: -50px; */
   left: 22px;
 }
 
@@ -72,36 +87,39 @@ h2 {
 /* ---------- profile ---------- */
 
 .profile {
-  /* width: 100%; */
-  /* width: 100vw; */
+  /* width: 200vw; */
   background-image: url(../images/flower00.png);
   background-repeat: no-repeat;
-  background-position: 1000px bottom;
+  background-position: 57% bottom;
 }
 
-.profile > div {
+/* .profile .wrapper {
   display: flex;
+  width: 100vw;
+  justify-self: center;
+} */
+
+/* .profile .first_contents,
+.profile .second_contents {
+  display: flex;
+  height: 100%;
+  align-items: center;
+} */
+
+.profile .first_contents {
+  /* display: flex;
+  width: 100vw;
+  justify-content: center; */
+  gap: 10%;
 }
 
 .profile .ttl {
-  /* width: 400px; */
-
   height: 300px;
-  margin-left: 11%;
 }
-
-.profile > div > div:nth-of-type(2) {
-  margin-left: 11%;
-
-  /* flex-grow: 2; */
-}
-
-/* .profile > div:nth-of-type(4) {
-  margin-left: 300px;
-} */
 
 .profile .txt {
   width: 590px;
+  padding-right: 5%;
 }
 
 .profile .txt p {
@@ -110,23 +128,42 @@ h2 {
   text-align: justify;
 }
 
-.profile > div > div:nth-of-type(3) {
-  margin-left: 12%;
-
-  /* flex-grow: 1; */
-}
-
-.profile > div > div:nth-of-type(3) p:nth-of-type(2) {
+.profile .txt:nth-of-type(2) p:nth-of-type(2) {
   font-size: 18px;
   color: #ec6c4e;
   width: 620px;
   margin-top: 95px;
 }
+
+@media screen and (max-width: 1100px) {
+  .profile .top_contents {
+    gap: 7%;
+  }
+
+  .profile .txt {
+    width: 455px;
+  }
+
+  .profile .txt p {
+    width: 503px;
+  }
+}
 /* ---------- history ---------- */
 
-.history {
-  gap: 116px;
-  margin-left: 900px;
+/* .history .wrapper {
+  display: flex;
+} */
+
+.history .top_contents {
+  /* display: flex;
+  width: 100vw;
+  justify-content: center; */
+  gap: 6%;
+  /* background-image: url(../images/gragh.png);
+  background-size: 81%;
+  background-repeat: no-repeat;
+  background-position: 60% bottom; */
+  position: relative;
 }
 
 .history .ttl {
@@ -135,13 +172,28 @@ h2 {
 
 .history .contents {
   display: flex;
-  gap: 32px;
+  justify-content: space-between;
+  gap: 1%;
+  width: 72%;
+  position: relative;
+}
+
+.history .img {
+  width: 110%;
+  position: absolute;
+  bottom: 0px;
+  right: 0%;
+  z-index: 1;
 }
 
 .history .content {
+  border-top: 1px solid #f2917e;
+  border-left: 1px solid #f2917e;
+  display: flex;
   position: relative;
-  width: 109px;
+  width: 90px;
   height: 400px;
+  z-index: 0;
 }
 
 h3 {
@@ -157,20 +209,22 @@ h3 {
   align-items: center;
 }
 
-.history .line {
-  width: 107px;
-  height: 393px;
-  border-top: 1px solid #f2917e;
-  border-left: 1px solid #f2917e;
-  position: absolute;
+/* .history .line {
+  width: 70px;
+  height: 393px; */
+/* border-top: 1px solid #f2917e;
+  border-left: 1px solid #f2917e; */
+/* position: absolute;
   top: 0px;
-  left: 0px;
-}
+  left: 0px; */
 
 .history .txt {
   writing-mode: vertical-rl;
-  padding-top: 14px;
-  padding-left: 42px;
+  display: block;
+  margin-top: 14px;
+  margin-left: 9%;
+  position: relative;
+  z-index: 2;
 }
 
 .line_diagonal {
@@ -178,8 +232,8 @@ h3 {
   border-bottom: 1px solid #f2917e;
   transform: rotate(45deg);
   position: absolute;
-  top: -4px;
-  left: 97px;
+  top: -5px;
+  left: 88%;
 }
 
 .history .content_last {
@@ -198,14 +252,16 @@ h3 {
 }
 
 .history .content_bottom p:nth-of-type(1) {
+  color: #fffcf5;
   text-align: center;
   line-height: 2;
   width: 270px;
-  border: 1px solid #f2917e;
+  border: 1px solid #fffcf5;
   margin: 0 auto;
 }
 
 .history .content_bottom p:nth-of-type(2) {
+  color: #fffcf5;
   line-height: 1.5;
   letter-spacing: 0.025em;
   text-align: center;
@@ -213,30 +269,47 @@ h3 {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1100px) {
+  .history .top_contents {
+    width: 145vw;
+  }
+}
+
 /* ---------- skills ---------- */
 
-.skills {
+/* .skills {
   margin-left: 40px;
-}
+} */
 
-.skills > div {
+/* .skills .wrapper {
   display: flex;
-}
+} */
+
+/* .skills .top_contents {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  gap: 10%;
+} */
 
 .skills .ttl {
   height: 263px;
 }
 
+.skills .ttl_line {
+  width: 350px;
+  /* width: 770%;にすると1366でいい感じだが1100でかぶる、どの画面幅でも画面端に少し見えるようにしたい */
+}
+
 .skills table:nth-of-type(1) {
-  margin-left: 85px;
+  margin-left: 120px;
 }
 
 .skills table:nth-of-type(2) {
-  margin-left: 42px;
+  margin-left: 45px;
 }
 
 table {
-  /* height: 400px; */
   margin-top: 30px;
 }
 
@@ -295,18 +368,28 @@ td {
   width: 54px;
 }
 
+@media screen and (max-width: 1100px) {
+  .skills table:nth-of-type(1) {
+    margin-left: 8%;
+  }
+
+  .skills table:nth-of-type(2) {
+    margin-left: 3%;
+  }
+}
+
 /* ---------- 共通 strength love design ---------- */
 
-.strength,
+/* .strength,
 .love,
 .design {
   margin-left: 40px;
-}
-.strength > div,
+} */
+/* .strength > div,
 .love > div,
 .design > div {
   display: flex;
-}
+} */
 
 .strength .contents,
 .love .contents,
@@ -337,6 +420,10 @@ td {
   height: 227px;
 }
 
+.strength .ttl_line {
+  width: 970%;
+}
+
 .strength .contents > p:nth-of-type(1) {
   margin-top: 78px;
 }
@@ -352,8 +439,16 @@ td {
   height: 223px;
 }
 
+.love .ttl_line {
+  width: 1080%;
+}
+
 /* ---------- design ---------- */
 
 .design .ttl {
   height: 268px;
+}
+
+.design .ttl_line {
+  width: 300%;
 }

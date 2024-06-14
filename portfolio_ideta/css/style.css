@@ -41,6 +41,26 @@
   margin-top: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .btn {
+    width: 105px;
+    height: 105px;
+  }
+
+  .btn p:nth-of-type(1) {
+    padding-top: 18px;
+  }
+
+  .arrow_right {
+    top: 66px;
+    left: 69px;
+  }
+
+  .arrow_bottom {
+    height: 13px;
+  }
+}
+
 /* ---------- FV ---------- */
 
 .fv {
@@ -48,6 +68,11 @@
   height: 100%;
   width: 100vw;
   align-items: center;
+  justify-content: center;
+  background-image: url(../images/FV_img.png);
+  background-size: 345px;
+  background-position: 16% 85%;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -56,14 +81,14 @@ h1 {
   font-weight: 400;
   font-size: 56px;
   letter-spacing: 0.2em;
-  margin: 66px auto auto 178px;
+  margin: 66px auto auto 0px;
 }
 
 .fv > div > div {
   width: 260px;
   height: 30px;
   background: #53c711;
-  margin: 34px auto auto 64%;
+  margin: 34px auto auto 56%;
   z-index: 400;
 }
 
@@ -76,12 +101,14 @@ h1 {
   padding-left: 25px;
 }
 
-.fv img {
+/* .fv img {
   margin: 7px auto auto 114px;
-  /* margin-left: 114px; */
-}
+} */
 
 @media screen and (max-width: 1100px) {
+  .fv {
+    background-size: 30%;
+  }
   h1 {
     font-size: 33px;
     margin-top: 106px;
@@ -92,29 +119,58 @@ h1 {
   }
 }
 
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 31px;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.4em;
+    white-space: normal;
+    font-feature-settings: initial;
+
+    height: 348px;
+    margin: 161px auto 0px auto;
+  }
+
+  .fv > div > div {
+    width: 26px;
+    height: 160px;
+    /* background: #53c711; */
+    margin: -363px auto 0px -226%;
+    /* z-index: 400; */
+  }
+
+  .fv p {
+    font-size: 12px;
+    letter-spacing: 0.46em;
+    writing-mode: vertical-rl;
+    height: 121px;
+    /* padding-left: 25px; */
+  }
+}
+
 /* ---------- わたしのこと ---------- */
 
 .about {
-  background-image: url(../images/flower00.png);
+  background-image: url(../images/flower001.png);
   background-repeat: no-repeat;
-  background-position: right bottom;
-
-  width: 990px;
-  /* width: 100vw; */
+  background-position: 99% bottom;
   display: flex;
-  justify-content: space-between;
   height: 100%;
   align-items: center;
-  margin-left: 12%;
 }
 
-.about > div {
+.about > .wrapper {
   display: flex;
 }
 
+.top_contents {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
 .ttl {
   position: relative;
-  margin-right: 90px;
+  margin-right: 8%;
 }
 
 h2 {
@@ -160,7 +216,7 @@ h2 {
 }
 
 .about_content {
-  width: 1000px;
+  width: 666px;
   position: relative;
 }
 
@@ -173,6 +229,7 @@ h2 {
 
 .about_content img {
   height: 400px;
+  object-fit: contain;
   z-index: 10;
 }
 
@@ -205,6 +262,10 @@ h2 {
 }
 
 @media screen and (max-width: 1100px) {
+  .about {
+    background-position: 99% bottom;
+  }
+
   .ttl {
     margin-right: 28px;
   }
@@ -228,18 +289,75 @@ h2 {
   }
 }
 
-/* ---------- つくったもの 共通 ---------- */
+@media screen and (max-width: 767px) {
+  .top_contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-/* .works {
-  width: 5000px;
-} */
+  h2 {
+    writing-mode: horizontal-tb;
+    padding: 74px 0px 10px;
+    border: none;
+  }
+
+  .ttl p {
+    top: 47px;
+    left: -79px;
+  }
+
+  .ttl_line {
+    top: 90px;
+    left: -1745%;
+  }
+
+  .about_content {
+    width: 278px;
+  }
+
+  .about_content > div:nth-child(2) {
+    top: 300px;
+    left: 0px;
+  }
+
+  .about_content img {
+    height: 292px;
+  }
+
+  .txt_bg {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+  }
+
+  .about a {
+    top: -39px;
+    left: 169px;
+  }
+}
+
+/* ---------- つくったもの 共通 ---------- */
 
 .works {
   display: flex;
   height: 100%;
   align-items: center;
-  padding-left: 9%;
 }
+
+.works .wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+/* .works .top_contents,
+.works .second_contents,
+.works .third_contents {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+} */
 
 .works_line {
   width: 505%;
@@ -264,27 +382,47 @@ h3 {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .works {
+    /* display: flex; */
+    /* height: 100%; */
+    /* align-items: center; */
+    flex-direction: column;
+  }
+
+  .works .wrapper {
+    display: flex;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .works_line {
+    /* width: 505%; */
+    /* border-bottom: 1px solid #ec6c4e; */
+    /* position: absolute; */
+    top: 90px;
+    left: -515%;
+  }
+}
+
 /* ---------- WEBSITE ---------- */
 
-/* .hp {
-  width: 100vh;
-} */
-
-.hp {
-  background-image: url(../images/flower02.png);
-  width: 1200px;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: right bottom;
+.first_contents {
   display: flex;
+  height: 100%;
   align-items: center;
+  background-image: url(../images/flower002.png);
+  background-repeat: no-repeat;
+  background-position: 97% bottom;
 }
 
 .hp_square {
   width: 630px;
   height: 288px;
   background-color: #fff;
-  margin: 71px 180px auto auto;
+  margin: 71px 48px auto auto;
   position: relative;
   z-index: 10;
 }
@@ -316,8 +454,12 @@ h3 {
 }
 
 @media screen and (max-width: 1100px) {
+  .works .ttl {
+    margin-right: 2%;
+  }
+
   .hp {
-    width: 755px;
+    width: 635px;
     background-size: 160px;
   }
 
@@ -343,42 +485,74 @@ h3 {
   }
 }
 
-/* ---------- LANDINGPAGE ---------- */
+@media screen and (max-width: 767px) {
+  .first_contents {
+    /* display: flex; */
+    /* height: 100%; */
+    /* align-items: center; */
+    /* background-image: url(../images/flower002.png); */
+    background-size: 33%;
+    /* background-repeat: no-repeat; */
+    background-position: 12% 425px;
+  }
 
-/* これを適応すると要素が左にズレて、縦幅基準の正方形になる*/
-/* .lp {
-  width: 100vh;
-} */
+  .works .ttl {
+    margin-right: 0%;
+  }
 
-/* 背景画像を指定するとsectionが中央配置されなくなる 
-→height指定しているから
-→heightなしだと400pxが適応されている
-→wrapperを下に動かす、div追加
-→意味ない（上に400、下に花の画像）
-→works全体に対して中央配置がかかっていて背景画像も含まれているから
-→works外に出してsectionに背景画像を適応するとレスポンシブズレないのか？*/
-.lp {
-  background-image: url(../images/flower02.png);
-  width: 700px;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  display: flex;
-  align-items: center;
-  /* margin-left: 11%; */
-  padding-left: 13%;
+  .hp_square {
+    width: 630px;
+    height: 288px;
+    background-color: transparent;
+    margin: 65px auto auto;
+    /* position: relative; */
+    /* z-index: 10; */
+  }
+
+  .hp_square h3 {
+    padding-right: 25px;
+    width: 225px;
+    /* position: absolute; */
+    top: 257px;
+    left: 170px;
+    /* border-bottom: solid 1px #ec6c4e; */
+    /* z-index: 100; */
+  }
+
+  .hp_img {
+    width: 287px;
+    height: 0px;
+    /* position: absolute; */
+    top: 0px;
+    left: 172px;
+  }
+
+  .hp_square a {
+    /* display: inline-block; */
+    width: 105px;
+    height: 105px;
+    /* position: relative; */
+    top: 315px;
+    right: -355px;
+  }
 }
 
-.lp > div {
+/* ---------- LANDINGPAGE ---------- */
+
+.second_contents {
   display: flex;
+  height: 100%;
   align-items: center;
+  background-image: url(../images/flower003.png);
+  background-repeat: no-repeat;
+  background-position: 97% bottom;
 }
 
 .lp_square {
   width: 427px;
   height: 285px;
   background-color: #fff;
-  margin: 77px 430px auto auto;
+  margin-top: 77px;
   position: relative;
   z-index: 20;
 }
@@ -394,7 +568,6 @@ h3 {
 
 .lp_img {
   width: 173px;
-  /* height: 300px; */
   position: absolute;
   top: -27px;
   left: 220px;
@@ -422,34 +595,77 @@ h3 {
   }
 }
 
-/* ---------- BANNER ---------- */
+@media screen and (max-width: 767px) {
+  .second_contents {
+    /* display: flex; */
+    /* height: 100%; */
+    /* align-items: center; */
+    /* background-image: url(../images/flower003.png); */
+    background-size: 33%;
+    /* background-repeat: no-repeat; */
+    background-position: 12% 425px;
+  }
 
-.bn {
-  background-image: url(../images/flower02.png);
-  width: 660px;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  display: flex;
-  align-items: center;
-  padding-left: 12%;
+  .lp_square {
+    /* width: 410px; */
+    /* height: 285px; */
+    background-color: transparent;
+    margin-top: 106px;
+    /* position: relative; */
+    /* z-index: 20; */
+  }
+
+  .lp_square h3 {
+    padding-right: 25px;
+
+    width: 660px;
+    position: absolute;
+    top: 207px;
+    left: -95%;
+    border-bottom: solid 1px #ec6c4e;
+    z-index: 200;
+  }
+
+  .lp_img {
+    width: 173px;
+    position: absolute;
+    top: -27px;
+    left: 220px;
+  }
+
+  .lp_square a {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: -70px;
+    right: -355px;
+  }
 }
 
-.bn > div {
+/* ---------- BANNER ---------- */
+
+.third_contents {
   display: flex;
+  height: 100%;
   align-items: center;
+  background-image: url(../images/flower004.png);
+  background-repeat: no-repeat;
+  background-position: 97% bottom;
 }
 
 .bn_square {
   width: 427px;
   height: 285px;
   background-color: #fff;
-  margin: 77px 450px auto auto;
+  margin-top: 77px;
   position: relative;
   z-index: 30;
 }
 
 .bn_square h3 {
+  padding-right: 25px;
+
   width: 420px;
   position: absolute;
   top: 207px;
@@ -460,7 +676,6 @@ h3 {
 
 .bn_img {
   width: 300px;
-  /* height: 300px; */
   position: absolute;
   top: -27px;
   left: 101px;
@@ -475,16 +690,72 @@ h3 {
   right: -369px;
 }
 
+@media screen and (max-width: 767px) {
+  .third_contents {
+    /* display: flex; */
+    /* height: 100%; */
+    /* align-items: center; */
+    /* background-image: url(../images/flower004.png); */
+    background-size: 33%;
+    /* background-repeat: no-repeat; */
+    background-position: 12% 425px;
+  }
+
+  .bn_square {
+    /* width: 427px; */
+    /* height: 285px; */
+    background-color: transparent;
+    margin-top: 106px;
+    /* position: relative; */
+    /* z-index: 30; */
+  }
+
+  .bn_square h3 {
+    width: 420px;
+    position: absolute;
+    top: 207px;
+    left: -70%;
+    border-bottom: solid 1px #ec6c4e;
+    z-index: 300;
+  }
+
+  .bn_img {
+    width: 217px;
+    position: absolute;
+    top: -27px;
+    left: 101px;
+  }
+
+  .bn_square a {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: -70px;
+    right: -369px;
+  }
+}
+
 /* ---------- CONTACT ---------- */
 
 .contact {
+  /* display: flex; */
+  /* height: 100%; */
+  /* align-items: center; */
+  /* background-image: url(../images/contact_img.png); */
+  background-size: 33%;
+  /* background-repeat: no-repeat; */
+  background-position: 12% 425px;
+}
+
+.contact .wrapper {
   display: flex;
-  width: 960px;
-  height: 100%;
-  align-items: center;
-  /* padding-right: 100px; */
-  /* margin-right: 100px; */
-  padding-left: 80%;
+}
+
+.contact .top_contents {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
 }
 
 .contact_line {
@@ -495,14 +766,28 @@ h3 {
   left: -440px;
 }
 
+.ttl {
+  margin-right: 6%;
+}
+
+.contact .txt {
+  margin-right: 3%;
+}
+
+.contact .txt p {
+  letter-spacing: 0.09em;
+  writing-mode: vertical-rl;
+}
+
 form {
   position: relative;
 }
 
 .contact-table {
   /* width: 100%; */
-  width: 807px;
+  min-width: 650px;
   margin-bottom: 20px;
+  padding-right: 5%;
 }
 
 th {
@@ -515,17 +800,13 @@ td {
   padding-bottom: 15px;
 }
 
-/* td :nth-of-type(n + 1) {
-  padding-top: 15px;
-} */
-
 input {
-  width: 630px;
+  width: 100%;
   height: 50px;
 }
 
 textarea {
-  width: 630px;
+  width: 100%;
   height: 242px;
 }
 
@@ -533,6 +814,19 @@ textarea {
   width: 120px;
   height: 120px;
   border-radius: 60px;
+  background: #fff;
+  border: 1px solid #53c711;
+
   position: absolute;
   top: 280px;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-table {
+    min-width: 475px;
+    padding-right: 8%;
+  }
+}
+
+@media screen and (max-width: 767px) {
 }
