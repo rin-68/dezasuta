@@ -149,12 +149,15 @@ h2 {
   }
 }
 
+/* ---------- ALL ---------- */
+
 .all {
   display: flex;
+  align-items: center;
 }
 
 .allpage {
-  width: 4000px;
+  width: 3023px;
   display: flex;
   gap: 10px;
 }
@@ -195,6 +198,12 @@ h2 {
   align-items: center;
 }
 
+.all .wrapper {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 150px;
+}
+
 a {
   width: 120px;
   height: 120px;
@@ -205,7 +214,8 @@ a {
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  border: 1px solid #423732;
+  background: #fff;
+  border: 1px solid #53c711;
   /* position: relative; */
 }
 
