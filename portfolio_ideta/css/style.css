@@ -298,6 +298,7 @@ h2 {
   }
 
   h2 {
+    color: #ec6c4e;
     writing-mode: horizontal-tb;
     padding: 74px 0px 10px;
     border: none;
@@ -383,12 +384,12 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
-  .works {
-    /* display: flex; */
-    /* height: 100%; */
-    /* align-items: center; */
+  /* .works {
+    display: flex;
+    height: 100%;
+    align-items: center;
     flex-direction: column;
-  }
+  } */
 
   .works .wrapper {
     display: flex;
@@ -486,6 +487,10 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
+  .hp {
+    width: 375px;
+  }
+
   .first_contents {
     /* display: flex; */
     /* height: 100%; */
@@ -501,8 +506,8 @@ h3 {
   }
 
   .hp_square {
-    width: 630px;
-    height: 288px;
+    width: 287px;
+    height: 10px;
     background-color: transparent;
     margin: 65px auto auto;
     /* position: relative; */
@@ -513,18 +518,18 @@ h3 {
     padding-right: 25px;
     width: 225px;
     /* position: absolute; */
-    top: 257px;
-    left: 170px;
+    top: 234px;
+    left: 0px;
     /* border-bottom: solid 1px #ec6c4e; */
     /* z-index: 100; */
   }
 
   .hp_img {
     width: 287px;
-    height: 0px;
+    /* height: 0px; */
     /* position: absolute; */
-    top: 0px;
-    left: 172px;
+    top: 14px;
+    left: 0px;
   }
 
   .hp_square a {
@@ -532,8 +537,8 @@ h3 {
     width: 105px;
     height: 105px;
     /* position: relative; */
-    top: 315px;
-    right: -355px;
+    top: 287px;
+    right: -175px;
   }
 }
 
@@ -596,6 +601,11 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
+  .lp {
+    width: 375px;
+    margin: 0 auto;
+  }
+
   .second_contents {
     /* display: flex; */
     /* height: 100%; */
@@ -607,10 +617,12 @@ h3 {
   }
 
   .lp_square {
-    /* width: 410px; */
-    /* height: 285px; */
+    width: 173px;
+    height: 10px;
     background-color: transparent;
-    margin-top: 106px;
+    margin: 65px 150px 100px;
+
+    /* margin-top: 106px; */
     /* position: relative; */
     /* z-index: 20; */
   }
@@ -618,28 +630,28 @@ h3 {
   .lp_square h3 {
     padding-right: 25px;
 
-    width: 660px;
-    position: absolute;
-    top: 207px;
-    left: -95%;
-    border-bottom: solid 1px #ec6c4e;
-    z-index: 200;
+    /* width: 660px; */
+    /* position: absolute; */
+    top: 348px;
+    left: -242%;
+    /* border-bottom: solid 1px #ec6c4e; */
+    /* z-index: 200; */
   }
 
   .lp_img {
     width: 173px;
-    position: absolute;
-    top: -27px;
-    left: 220px;
+    /* position: absolute; */
+    top: 17px;
+    left: 0px;
   }
 
   .lp_square a {
-    display: inline-block;
-    width: 120px;
-    height: 120px;
-    position: relative;
-    top: -70px;
-    right: -355px;
+    /* display: inline-block; */
+    width: 105px;
+    height: 105px;
+    /* position: relative; */
+    top: 397px;
+    right: -111px;
   }
 }
 
@@ -659,6 +671,7 @@ h3 {
   height: 285px;
   background-color: #fff;
   margin-top: 77px;
+
   position: relative;
   z-index: 30;
 }
@@ -678,7 +691,7 @@ h3 {
   width: 300px;
   position: absolute;
   top: -27px;
-  left: 101px;
+  left: 0px;
 }
 
 .bn_square a {
@@ -701,29 +714,39 @@ h3 {
     background-position: 12% 425px;
   }
 
+  /* .third_contents .wrapper {
+    margin-top: 148px;
+  } */
+
+  .bn {
+    width: 375px;
+  }
+
   .bn_square {
-    /* width: 427px; */
-    /* height: 285px; */
+    width: 217px;
+    height: 10px;
     background-color: transparent;
-    margin-top: 106px;
+    /* margin-top: 106px; */
+    margin: 180px 150px 100px;
+
     /* position: relative; */
     /* z-index: 30; */
   }
 
   .bn_square h3 {
     width: 420px;
-    position: absolute;
-    top: 207px;
-    left: -70%;
-    border-bottom: solid 1px #ec6c4e;
-    z-index: 300;
+    /* position: absolute; */
+    top: 233px;
+    left: -115%;
+    /* border-bottom: solid 1px #ec6c4e; */
+    /* z-index: 300; */
   }
 
   .bn_img {
     width: 217px;
     position: absolute;
-    top: -27px;
-    left: 101px;
+    top: -40px;
+    left: 0px;
   }
 
   .bn_square a {
@@ -731,17 +754,17 @@ h3 {
     width: 120px;
     height: 120px;
     position: relative;
-    top: -70px;
-    right: -369px;
+    top: 285px;
+    right: -140px;
   }
 }
 
 /* ---------- CONTACT ---------- */
 
 .contact {
-  /* display: flex; */
-  /* height: 100%; */
-  /* align-items: center; */
+  display: flex;
+  height: 100%;
+  align-items: center;
   /* background-image: url(../images/contact_img.png); */
   background-size: 33%;
   /* background-repeat: no-repeat; */
@@ -784,8 +807,9 @@ form {
 }
 
 .contact-table {
-  /* width: 100%; */
+  width: 60vw;
   min-width: 650px;
+  /* 1番小さいのでいいから475でもOK */
   margin-bottom: 20px;
   padding-right: 5%;
 }
@@ -829,4 +853,97 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
+  .contact {
+    /* display: flex;
+    height: 100%;
+    align-items: center; */
+    /* background-image: url(../images/contact_img.png); */
+    background-size: 33%;
+    /* background-repeat: no-repeat; */
+    background-position: 12% 425px;
+  }
+
+  .contact .wrapper {
+    display: flex;
+  }
+
+  /* .contact .top_contents {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  } */
+
+  .contact_line {
+    width: 460px;
+    border-bottom: 1px solid #ec6c4e;
+    position: absolute;
+    top: 90px;
+    left: -470px;
+  }
+
+  .ttl {
+    margin-right: 0%;
+  }
+
+  .contact .txt {
+    margin-right: 0%;
+  }
+
+  .contact .txt p {
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.09em;
+    writing-mode: horizontal-tb;
+    text-align: center;
+  }
+
+  /* form {
+    position: relative;
+  } */
+
+  .contact-table {
+    /* width: 60vw; */
+    min-width: 278px;
+    /* 1番小さいのでいいから475でもOK */
+    height: 300px;
+    margin-bottom: 0px;
+    padding-right: 0%;
+  }
+
+  th {
+    display: block;
+    text-align: left;
+    width: 20%;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  input {
+    /* width: 100%; */
+    height: 39px;
+  }
+
+  textarea {
+    /* width: 100%; */
+    height: 152px;
+  }
+
+  .submit {
+    color: #fff;
+    width: 60.5vw;
+    min-width: 282px;
+
+    height: 38px;
+    border-radius: 3px;
+    background: #8c756f;
+    border: none;
+
+    /* position: absolute; */
+    top: 345px;
+    left: 2px;
+  }
 }

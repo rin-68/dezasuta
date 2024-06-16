@@ -5,14 +5,30 @@ body {
   background-color: #fffcf5;
 }
 
-main > section:nth-of-type(1) {
-  background-image: url(../images/bg_1-80.jpg);
-  background-repeat: no-repeat;
-}
-/* main {
+/* main > section:nth-of-type(1) {
   background-image: url(../images/bg_1-80.jpg);
   background-repeat: no-repeat;
 } */
+
+/* body {
+  background-image: url(../images/bg_1-80.jpg);
+  background-repeat: no-repeat;
+  background-color: #fffcf5;
+  background-position-y: top;
+  background-position-x: left;
+} */
+
+main {
+  background-image: url(../images/bg_1-80.jpg);
+  background-repeat: no-repeat;
+  background-color: #fffcf5;
+  /* color: #fffcf5; */
+  /* width: 5000px; */
+  height: 100%;
+  /* background-position: left top; */
+  /* background-attachment: local; */
+  /* background-position-x: left; */
+}
 
 .wrapper {
   height: 400px;
@@ -48,7 +64,7 @@ main > section:nth-of-type(1) {
 
 /* ---------- 左 固定デザイン---------- */
 
-.portfolioname {
+.top_portfolioname {
   width: 4%;
   /* width: 60px; */
   height: 100vh;
@@ -59,49 +75,219 @@ main > section:nth-of-type(1) {
   z-index: 10001;
 }
 
-.portfolioname p {
+.top_portfolioname p {
   writing-mode: vertical-rl;
   margin: 0 auto;
 }
 
-.portfolioname span {
+.top_portfolioname span {
   color: #ec6c4e;
 }
 
-/* @media screen and (max-width: 1100px) {
-  h1 {
-    font-size: 30px;
+@media screen and (max-width: 767px) {
+  .top_portfolioname {
+    width: 100vw;
+    height: 45px;
+    top: auto;
+    left: auto;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10001;
   }
-} */
+
+  .top_portfolioname p {
+    font-size: 12px;
+    writing-mode: horizontal-tb;
+    line-height: 3.75;
+  }
+}
 
 /* ----------右 固定デザイン---------- */
 
-/* まずは横書きでリストを横並びにすると２段になる
-  それを２段のまま縦にするのでnavに縦書きを適応する */
-
-header {
-  width: 6%;
-  height: 100vh;
-  background: #fffcf5;
+.header {
+  display: flex;
+  height: 100%;
+  align-items: center;
   position: fixed;
-  bottom: 0px;
   right: 0px;
   z-index: 10000;
+}
+
+header .wrapper {
+  writing-mode: vertical-lr;
+}
+
+.pc_nav {
+  background: #fffcf5;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-nav {
-  writing-mode: vertical-rl;
-  min-height: 400px;
+.sp_menu,
+.sp_btn {
+  display: none;
 }
 
-li {
+.pc_nav li {
   display: flex;
   justify-content: space-between;
 }
 
-ul {
+.pc_nav ul {
   font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: fixed;
+    right: 0px;
+    z-index: 10000;
+  }
+
+  .header.open {
+    display: flex;
+    height: 100%;
+    background-color: #fffcf5;
+    position: static;
+    z-index: 10000;
+  }
+
+  .pc_nav {
+    display: none;
+  }
+
+  .sp_btn {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #f2917e;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10002;
+  }
+
+  .sp_btn span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    top: 16px;
+    left: 8px;
+  }
+
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -13px;
+    left: 0px;
+  }
+
+  .sp_btn.open span {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after {
+    bottom: 0px;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+
+  /* sp版メニュー */
+
+  .sp_menu {
+    display: flex;
+    width: 100vw;
+  }
+
+  .menu_portfolioname {
+    /* display: none; */
+    height: 100vh;
+    writing-mode: vertical-rl;
+    border-right: 1px solid #423732;
+    border-left: 1px solid #423732;
+    transform: rotate(180deg);
+    margin-left: 5%;
+  }
+
+  .header.open .menu_portfolioname {
+    display: block;
+  }
+
+  .menu_portfolioname span {
+    color: #ec6c4e;
+  }
+
+  .menu_portfolioname p {
+    font-size: 12px;
+    line-height: 4;
+  }
+
+  .sp_menu .content {
+    position: relative;
+    width: 100vw;
+  }
+
+  .triangle_top {
+    width: 226px;
+    height: 602px;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%);
+    background-color: #ec6c4e;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .triangle_bottom {
+    width: 224px;
+    height: 600px;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%);
+    background-color: #fffcf5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .sp_nav {
+    width: 100vw;
+    margin-top: 274px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+  }
+
+  .sp_nav li {
+    vertical-align: bottom;
+  }
+
+  .sp_nav ul {
+    /* font-weight: 700; */
+    font-size: 22px;
+    /* color: #f2917e; */
+    display: flex;
+    align-items: flex-end;
+    height: 50px;
+    border-bottom: 1px solid #423732;
+    padding-left: 37%;
+    padding-bottom: 0px;
+    position: relative;
+  }
+
+  .sp_nav ul span {
+    font-size: 12px;
+    letter-spacing: 0em;
+
+    display: block;
+    position: absolute;
+    right: 22%;
+    bottom: 3px;
+  }
 }

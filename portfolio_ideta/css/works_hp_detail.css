@@ -6,11 +6,11 @@
   background-repeat: no-repeat;
 } */
 
-main > section:nth-of-type(1) {
+/* main > section:nth-of-type(1) {
   background-image: url(../images/bg_1-80.jpg);
   height: 100vh;
   background-repeat: no-repeat;
-}
+} */
 
 /* .bg {
   background-image: url(../images/bg-80.jpg);
@@ -53,7 +53,7 @@ h1 {
   border-radius: 16px;
 }
 
-img {
+.img {
   position: relative;
 }
 
@@ -70,8 +70,8 @@ img {
 .img_sp {
   width: 128px;
   position: absolute;
-  top: 346px;
-  left: 575px;
+  top: 94px;
+  left: 460px;
 }
 
 .img_sp img {
@@ -145,7 +145,7 @@ h2 {
   }
 
   .img_sp {
-    left: 505px;
+    left: 460px;
   }
 }
 
@@ -204,7 +204,7 @@ h2 {
   padding-right: 150px;
 }
 
-a {
+.all a {
   width: 120px;
   height: 120px;
   border-radius: 60px;
