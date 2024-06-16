@@ -46,31 +46,33 @@
             </div>
             <div class="sp_btn"><span></span></div>
             <div class="sp_menu">
-                <div class="menu_portfolioname">
-                    <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
-                </div>
-                <div class="content">
-                    <nav class="sp_nav">
-                        <li>
-                            <ul class="en"><a href="./index.html">TOP</a></ul>
-                            <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
-                            <ul class="en"><a href="./works_hp.html">HP<span>WORKS</span></a></ul>
-                            <ul class="en"><a href="./works_lp.html">LP<span>WORKS</span></a></ul>
-                            <ul class="en"><a href="./works_bn.html">BANNER<span>WORKS</span></a></ul>
-                            <ul class="en"><a href="./index.html">CONTACT</a></ul>
-                        </li>
-                    </nav>
-                    <div class="triangle_top"></div>
-                    <div class="triangle_bottom"></div>
+                <div>
+                    <div class="menu_portfolioname">
+                        <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
+                    </div>
+                    <div class="content">
+                        <nav class="sp_nav">
+                            <li>
+                                <ul class="en"><a href="./index.html">TOP</a></ul>
+                                <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
+                                <ul class="en"><a href="./works_hp.html">HP<span>WORKS</span></a></ul>
+                                <ul class="en"><a href="./works_lp.html">LP<span>WORKS</span></a></ul>
+                                <ul class="en"><a href="./works_bn.html">BANNER<span>WORKS</span></a></ul>
+                                <ul class="en"><a href="./index.html">CONTACT</a></ul>
+                            </li>
+                        </nav>
+                        <div class="triangle_top"></div>
+                        <div class="triangle_bottom"></div>
 
+                    </div>
                 </div>
             </div>
 
         </div>
     </header>
-    <!-- <div class="top_portfolioname">
+    <div class="top_portfolioname">
         <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
-    </div> -->
+    </div>
 
     <main data-scroll-container>
         <section data-scroll-section class="scroll_section">
@@ -271,10 +273,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script>
         $(function () {
             $('.sp_btn').on('click', function () {
+
                 // $('.sp_menu').fadeToggle();
+                $('.sp_menu').fadeToggle();
+
                 $('.sp_btn').toggleClass('open');
                 $('.header').toggleClass('open');
-                $('.sp_menu').toggle();
+                $('.top_portfolioname').toggleClass('open');
             })
         });
     </script>

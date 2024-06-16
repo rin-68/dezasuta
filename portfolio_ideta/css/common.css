@@ -66,13 +66,16 @@ main {
 
 .top_portfolioname {
   width: 4%;
-  /* width: 60px; */
   height: 100vh;
   background: #fffcf5;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 10001;
+}
+
+.top_portfolioname.open {
+  display: none;
 }
 
 .top_portfolioname p {
@@ -92,7 +95,7 @@ main {
     left: auto;
     bottom: 0px;
     right: 0px;
-    z-index: 10001;
+    z-index: 5000;
   }
 
   .top_portfolioname p {
@@ -123,11 +126,6 @@ header .wrapper {
   flex-direction: column;
 }
 
-.sp_menu,
-.sp_btn {
-  display: none;
-}
-
 .pc_nav li {
   display: flex;
   justify-content: space-between;
@@ -136,27 +134,21 @@ header .wrapper {
 .pc_nav ul {
   font-size: 16px;
 }
+
+/* ---------- スマホ版メニュー ---------- */
+
+.sp_menu,
+.sp_btn {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
-  .header {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    position: fixed;
-    right: 0px;
-    z-index: 10000;
-  }
-
-  .header.open {
-    display: flex;
-    height: 100%;
-    background-color: #fffcf5;
-    position: static;
-    z-index: 10000;
-  }
-
-  .pc_nav {
+  .pc_nav,
+  header .wrapper {
     display: none;
   }
+
+  /* ---------- ハンバーガーメニュー(ボタン) ---------- */
 
   .sp_btn {
     display: block;
@@ -167,7 +159,7 @@ header .wrapper {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    z-index: 10002;
+    z-index: 5100;
   }
 
   .sp_btn span {
@@ -178,6 +170,7 @@ header .wrapper {
     position: relative;
     top: 16px;
     left: 8px;
+    transition: 0.3s;
   }
 
   .sp_btn span::after {
@@ -189,27 +182,34 @@ header .wrapper {
     position: absolute;
     bottom: -13px;
     left: 0px;
+    transition: 0.3s;
   }
 
   .sp_btn.open span {
     top: 22px;
     transform: rotate(45deg);
   }
+
   .sp_btn.open span::after {
     bottom: 0px;
     left: 0;
     transform: rotate(-90deg);
   }
 
-  /* sp版メニュー */
+  /* ---------- スマホ版メニューの見た目 ---------- */
 
-  .sp_menu {
+  .header.open {
+    display: block;
+    height: 100%;
+    background-color: #fffcf5;
+    position: static;
+  }
+
+  .sp_menu > div {
     display: flex;
-    width: 100vw;
   }
 
   .menu_portfolioname {
-    /* display: none; */
     height: 100vh;
     writing-mode: vertical-rl;
     border-right: 1px solid #423732;
@@ -218,65 +218,42 @@ header .wrapper {
     margin-left: 5%;
   }
 
-  .header.open .menu_portfolioname {
-    display: block;
+  .menu_portfolioname p {
+    font-size: 12px;
+    line-height: 4;
   }
 
   .menu_portfolioname span {
     color: #ec6c4e;
   }
 
-  .menu_portfolioname p {
-    font-size: 12px;
-    line-height: 4;
-  }
-
   .sp_menu .content {
     position: relative;
-    width: 100vw;
-  }
 
-  .triangle_top {
-    width: 226px;
-    height: 602px;
-    clip-path: polygon(0 0, 0% 100%, 100% 0%);
-    background-color: #ec6c4e;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .triangle_bottom {
-    width: 224px;
-    height: 600px;
-    clip-path: polygon(0 0, 0% 100%, 100% 0%);
-    background-color: #fffcf5;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100vw;
+    height: 100vh;
   }
 
   .sp_nav {
     width: 100vw;
-    margin-top: 274px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* display: none; */
+    height: 100%;
   }
 
   .sp_nav li {
+    width: 100%;
     vertical-align: bottom;
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
   }
 
   .sp_nav ul {
-    /* font-weight: 700; */
     font-size: 22px;
-    /* color: #f2917e; */
     display: flex;
     align-items: flex-end;
     height: 50px;
     border-bottom: 1px solid #423732;
-    padding-left: 37%;
+    padding-left: 38%;
     padding-bottom: 0px;
     position: relative;
   }
@@ -289,5 +266,25 @@ header .wrapper {
     position: absolute;
     right: 22%;
     bottom: 3px;
+  }
+
+  .triangle_top {
+    width: 60%;
+    height: 93%;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%);
+    background-color: #ec6c4e;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .triangle_bottom {
+    width: 59.7%;
+    height: 92.5%;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%);
+    background-color: #fffcf5;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
