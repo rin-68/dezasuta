@@ -84,27 +84,45 @@ h2 {
   width: 200px;
 }
 
+@media screen and (max-width: 767px) {
+  .ttl {
+    width: auto;
+  }
+
+  h2 {
+    color: #ec6c4e;
+    writing-mode: horizontal-tb;
+    padding: 0px;
+    margin: 69px auto 28px 97px;
+    border: none;
+  }
+
+  .ttl p {
+    top: -25px;
+    bottom: auto;
+    left: 55px;
+  }
+
+  .erase {
+    display: none;
+  }
+
+  .ttl_line {
+    width: 40px;
+    top: 16px;
+    bottom: auto;
+    right: auto;
+    left: 35px;
+  }
+}
+
 /* ---------- profile ---------- */
 
 .profile {
-  /* width: 200vw; */
   background-image: url(../images/flower00.png);
   background-repeat: no-repeat;
   background-position: 52% bottom;
 }
-
-/* .profile .wrapper {
-  display: flex;
-  width: 100vw;
-  justify-self: center;
-} */
-
-/* .profile .first_contents,
-.profile .second_contents {
-  display: flex;
-  height: 100%;
-  align-items: center;
-} */
 
 .profile .first_contents {
   display: flex;
@@ -117,15 +135,20 @@ h2 {
   height: 300px;
 }
 
-.profile .txt {
+.profile .pc_txt {
   width: 590px;
   padding-right: 5%;
 }
 
-.profile .txt p {
+.profile .pc_txt p {
   width: 590px;
   line-height: 1.7;
   text-align: justify;
+}
+
+.profile .sp_txt,
+.profile .sp_txt_last {
+  display: none;
 }
 
 .profile .second_contents {
@@ -151,6 +174,7 @@ h2 {
   .profile .txt {
     width: 503px;
     padding-right: 0;
+    margin-top: 125px;
   }
 
   .profile .txt p {
@@ -163,6 +187,49 @@ h2 {
 
   .profile .second_contents p:nth-of-type(2) {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile .first_contents {
+    display: block;
+    width: 738px;
+  }
+
+  .profile .ttl {
+    height: auto;
+  }
+
+  .profile .pc_txt,
+  .profile .pc_txt_last {
+    display: none;
+  }
+
+  .profile .sp_txt {
+    display: flex;
+    gap: 90px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  .profile .sp_txt p,
+  .profile .second_contents p:nth-of-type(1) {
+    width: 263px;
+    line-height: 1.7;
+  }
+
+  .profile .second_contents {
+    margin-left: 42px;
+  }
+
+  .profile .sp_txt_last {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    width: 216px;
+    margin-top: 20px;
+    margin-left: 18px;
   }
 }
 /* ---------- history ---------- */

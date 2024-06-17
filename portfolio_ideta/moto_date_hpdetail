@@ -115,53 +115,56 @@
                     <h1>カフェサイト（架空）</h1>
                 </div>
 
-                <div class="list_left">
-                    <div class="list-row">
-                        <ul>
-                            <li class="list_ttl">制作期間</li>
-                            <li class="list_txt">２日</li>
-                        </ul>
-                    </div>
-
-                    <div class="list-row">
-                        <ul>
-                            <li class="list_ttl">担当範囲</li>
-                            <li class="list_txt">Webデザイン、コーディング（HTML・CSS）</li>
-                        </ul>
-                    </div>
-
-                    <div vlass="list-row">
-                        <ul>
-                            <li class="list_ttl">使用ツール</li>
-                            <li class="list_txt">Adobe Illustrator・Adobe photoshop</li>
-                        </ul>
-                    </div>
-
-
-                    <div vlass="list-row">
-                        <ul>
-                            <li class="list_ttl">ターゲット</li>
-                            <li class="list_txt">50〜60代の女性</li>
-                        </ul>
-                    </div>
-
-
-                    <div vlass="list-row">
-                        <ul>
-                            <li class="list_ttl">コンセプト</li>
-                            <li class="list_txt">ナチュラル、おしゃれ</li>
-                        </ul>
-                    </div>
-
-                    <div vlass="list-row">
-                        <ul>
-                            <li class="list_ttl">目的・課題</li>
-                            <li class="list_txt">ー</li>
-                        </ul>
-                    </div>
-
-
-                </div>
+                <table>
+                    <tr>
+                        <th>
+                            <p class="ttl">制作期間</p>
+                        </th>
+                        <td>
+                            <p class="txt">２日</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="ttl">担当範囲</p>
+                        </th>
+                        <td>
+                            <p class="txt">Webデザイン、コーディング（HTML・CSS）</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="ttl">使用ツール</p>
+                        </th>
+                        <td>
+                            <p class="txt">Adobe Illustrator・Adobe photoshop</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="ttl">ターゲット</p>
+                        </th>
+                        <td>
+                            <p class="txt">50〜60代の女性</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="ttl">コンセプト</p>
+                        </th>
+                        <td>
+                            <p class="txt">ナチュラル、おしゃれ</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="ttl">コンセプト</p>
+                        </th>
+                        <td>
+                            <p class="txt">ー</p>
+                        </td>
+                    </tr>
+                </table>
                 <div class="point">
                     <h2>制作ポイント</h2>
                     <p>訴求ポイントは「簡単」に作ることができるところ。<br>

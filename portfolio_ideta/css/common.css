@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+main {
+  overflow: hidden;
+  overflow-x: scroll;
+
+  scroll-snap-type: x mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
 body {
   width: 100vw;
   background-color: #fffcf5;
@@ -109,7 +124,9 @@ main {
 
 .header {
   display: flex;
+  width: 133px;
   height: 100%;
+  background: #fffcf5;
   align-items: center;
   position: fixed;
   right: 0px;
@@ -118,21 +135,42 @@ main {
 
 header .wrapper {
   writing-mode: vertical-lr;
+  margin: 0 auto;
 }
 
 .pc_nav {
   background: #fffcf5;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .pc_nav li {
+  width: 38px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .pc_nav ul {
   font-size: 16px;
+}
+
+.pc_nav .line {
+  width: 1px;
+  height: 400px;
+  background: #000;
+}
+
+@media screen and (max-width: 1336px) {
+  .header {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    background: transparent;
+  }
 }
 
 /* ---------- スマホ版メニュー ---------- */
