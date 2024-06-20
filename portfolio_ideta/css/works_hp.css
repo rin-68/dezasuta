@@ -1,17 +1,11 @@
 @charset "UTF-8";
 
-main > section:nth-of-type(1) {
-  background-image: url(../images/bg_1-80.jpg);
-  height: 100vh;
-  background-repeat: no-repeat;
-}
-
-.contents {
+.pc_container {
   display: flex;
   height: 100%;
   align-items: center;
 
-  width: 1800px;
+  /* width: 1800px; */
   margin-left: 80px;
 }
 
@@ -42,6 +36,10 @@ main > section:nth-of-type(1) {
   margin-bottom: 27px;
 }
 
+.none {
+  color: #d3c4c1;
+}
+
 .content div p {
   font-size: 14px;
   line-height: 2;
@@ -52,9 +50,29 @@ main > section:nth-of-type(1) {
   margin: 0px auto;
 }
 
+.content .txt_none {
+  font-size: 14px;
+  line-height: 2;
+  color: #d3c4c1;
+
+  width: 176px;
+  /* height: 34px; */
+  text-align: center;
+  border: 1px solid #d3c4c1;
+  margin: 0px auto;
+}
+
 .link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.link .wrapper {
   display: flex;
   align-items: flex-end;
+  margin-left: 20px;
+  margin-right: 150px;
 }
 
 .link a {
@@ -88,4 +106,77 @@ main > section:nth-of-type(1) {
   /* position: absolute;
   top: 75px;
   left: 48px; */
+}
+
+.sp_container {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .pc_container {
+    display: none;
+  }
+  .sp_container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .inner {
+    display: flex;
+    gap: 68px;
+    margin: 42px 42px auto 42px;
+  }
+
+  .contents {
+    height: 500px;
+    display: flex;
+  }
+
+  .sp_img {
+    width: 236px;
+    height: 500px;
+  }
+
+  .sp_img_none {
+    width: 236px;
+    height: 500px;
+    border: 1px solid #d3c4c1;
+    position: relative;
+  }
+
+  .sp_img_none p {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #d3c4c1;
+    position: absolute;
+    top: 48%;
+    left: 29%;
+  }
+
+  .sp_img img {
+    width: 236px;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .sp_container .txt,
+  .sp_container .txt_none {
+    font-size: 14px;
+    writing-mode: vertical-lr;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sp_container .txt_none h2,
+  .sp_container .txt_none p {
+    color: #d3c4c1;
+  }
+
+  .link .wrapper {
+    height: 500px;
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }

@@ -38,14 +38,16 @@
                     </li>
 
                     <li>
-                        <ul class="en"><a href="./works_hp.html">HP</a></ul>
+                        <ul class="en here"><a href="./works_hp.html">HP</a></ul>
                         <ul class="en"><a href="./works_lp.html">LP</a></ul>
                         <ul class="en"><a href="./works_bn.html">BANNER</a></ul>
                         <ul class="en">WORKS</ul>
                     </li>
                 </nav>
             </div>
-            <div class="sp_btn"><span></span></div>
+            <div class="sp_btn">
+                <div class="box"><span></span></div>
+            </div>
             <div class="sp_menu">
                 <div>
                     <div class="menu_portfolioname">
@@ -74,9 +76,11 @@
     <div class="top_portfolioname">
         <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
     </div>
+    <div class="bg"></div>
+
     <main data-scroll-container>
         <section data-scroll-section class="scroll_section">
-            <div class="contents wrapper">
+            <div class="pc_container wrapper">
                 <div class="content">
                     <img src="./images/hp_cafe_1.png">
                     <p class="ttl">カフェサイト（架空）</p>
@@ -86,21 +90,64 @@
                 </div>
                 <div class="content">
                     <img src="./images/works_hp_00.png">
-                    <p class="ttl">-</p>
+                    <p class="ttl none">-</p>
                     <p class="en">In production</p>
                     <div>
-                        <p>レスポンシブ</p>
+                        <p class="txt_none">レスポンシブ</p>
                     </div>
                 </div>
                 <div class="content">
                     <img src="./images/works_hp_00.png">
-                    <p class="ttl">-</p>
+                    <p class="ttl none">-</p>
                     <p class="en">In production</p>
                     <div>
-                        <p>レスポンシブ</p>
+                        <p class="txt_none">レスポンシブ</p>
                     </div>
                 </div>
-                <div class="link wrapper">
+            </div>
+            <div class="sp_container">
+                <div class="wrapper">
+                    <div class="page_ttl">
+                        <p class="en">WORKS</p>
+                        <p class="en">HP</p>
+                    </div>
+                    <div class="inner">
+                        <div class="contents">
+                            <div class="sp_img">
+                                <img src="./images/hp_cafe_2.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <h2>カフェサイト（架空）</h2>
+                                <p>レスポンシブ</p>
+                            </div>
+                        </div>
+                        <div class="contents">
+                            <div class="sp_img_none">
+                                <p>in production</p>
+                            </div>
+                            <div class="txt_none">
+                                <h2>カフェサイト（架空）</h2>
+                                <p>レスポンシブ</p>
+                            </div>
+                        </div>
+                        <div class="contents">
+                            <div class="sp_img_none">
+                                <p>in production</p>
+                            </div>
+                            <div class="txt_none">
+                                <h2>カフェサイト（架空）</h2>
+                                <p>レスポンシブ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section">
+
+            <div class="link">
+                <div class="wrapper">
                     <a href="">
                         <div class="btn">
                             <p class="en">CONTACT</p>
@@ -109,8 +156,9 @@
                     </a>
                 </div>
             </div>
-
         </section>
+
+
     </main>
     <script src="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
@@ -118,7 +166,7 @@
     <script>
         (() => {
             document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
+                const scroll = new LocomotiveScroll({
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
@@ -134,6 +182,20 @@
                     }
 
                 })
+                const bg = document.querySelector('.bg')
+                const secondSection = document.querySelector('.second_section')
+                const secondSectionX = secondSection.getBoundingClientRect().x
+                // console.log(secondSectionX)
+                scroll.on('scroll', function (event) {
+                    const scrollX = event.scroll.x
+                    // console.log(scrollX)
+                    if (scrollX <= secondSectionX) {
+                        const opacity = 1 - (scrollX / secondSectionX)
+                        bg.style.opacity = opacity
+                    }
+                })
+
+
             })
         })()
 

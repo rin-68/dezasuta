@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg_1-80.jpg);
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  background-size: cover;
+  opacity: 1;
+}
+
 main {
   overflow: hidden;
   overflow-x: scroll;
@@ -34,8 +47,8 @@ body {
 } */
 
 main {
-  background-image: url(../images/bg_1-80.jpg);
-  background-repeat: no-repeat;
+  /* background-image: url(../images/bg_1-80.jpg); */
+  /* background-repeat: no-repeat; */
   background-color: #fffcf5;
   /* color: #fffcf5; */
   /* width: 5000px; */
@@ -67,6 +80,11 @@ main {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.2em;
+}
+
+.here {
+  font-weight: 700;
+  color: #ec6c4e;
 }
 
 .cursive {
@@ -124,7 +142,8 @@ main {
 
 .header {
   display: flex;
-  width: 133px;
+  /* width: 133px; */
+  /* ここが表示崩れの原因 */
   height: 100%;
   background: #fffcf5;
   align-items: center;
@@ -162,9 +181,10 @@ header .wrapper {
 }
 
 @media screen and (max-width: 1336px) {
-  .header {
+  /* .header {
     width: 10%;
-  }
+  } */
+  /* ここが表示崩れの原因 */
 }
 
 @media screen and (max-width: 767px) {
@@ -247,6 +267,15 @@ header .wrapper {
     display: flex;
   }
 
+  .sp_menu {
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .sp_menu.active {
+    opacity: 1;
+  }
+
   .menu_portfolioname {
     height: 100vh;
     writing-mode: vertical-rl;
@@ -325,4 +354,29 @@ header .wrapper {
     top: 0;
     left: 0;
   }
+}
+/* ---------- SP版 左上文字 ---------- */
+
+.page_ttl {
+  display: flex;
+}
+
+.page_ttl p:nth-of-type(1) {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  line-height: 2.5;
+  color: #fffcf5;
+  width: 70px;
+  height: 30px;
+  background: #f2917e;
+  text-align: center;
+}
+
+.page_ttl p:nth-of-type(2) {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  line-height: 2.5;
+  width: 40px;
+  height: 30px;
+  text-align: center;
 }

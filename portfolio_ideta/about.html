@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/about.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN Scrollify セクションごとにスクロール -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
 
     <script>
         (function (d) {
@@ -33,7 +35,7 @@
                 <nav class="pc_nav">
                     <li>
                         <ul class="en"><a href="./index.html">TOP</a></ul>
-                        <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
+                        <ul class="en here"><a href="./about.html">ABOUT ME</a></ul>
                         <ul class="en"><a href="./index.html">CONTACT</a></ul>
                     </li>
                     <div class="line"></div>
@@ -74,6 +76,8 @@
     <div class="top_portfolioname">
         <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
     </div>
+    <div class="bg"></div>
+
     <main data-scroll-container>
         <section data-scroll-section class="scroll_section">
             <div class="profile">
@@ -120,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <section data-scroll-section class="scroll_section">
+        <section data-scroll-section class="scroll_section second_section">
             <div class="history">
                 <div class="wrapper">
                     <div class="top_contents">
@@ -201,7 +205,7 @@
                             <div class="erase"></div>
                             <div class="ttl_line"></div>
                         </div>
-                        <table>
+                        <table class="pc_table">
                             <tr>
                                 <th>
                                     <p class="first">Ranking</p>
@@ -236,7 +240,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <table>
+                        <table class="pc_table">
                             <tr>
                                 <td> <img class="icon_top" src="./images/canva.png" alt="キャンバ">
                                 </td>
@@ -273,6 +277,84 @@
                                 </td>
                             </tr>
                         </table>
+                        <table class="sp_table">
+                            <tr>
+                                <th>
+                                    <p class="first">Ranking</p>
+                                    <img class="ranking" src="./images/no1.png" alt="一位">
+                                </th>
+                                <th>
+                                    <p class="second">Ranking</p>
+                                    <img class="ranking" src="./images/no2.png" alt="三位">
+                                </th>
+                                <th>
+                                    <p class="third">Ranking</p>
+                                    <img class="ranking" src="./images/no3.png" alt="二位">
+                                </th>
+
+                            </tr>
+                            <tr>
+                                <td> <img class="icon" src="./images/Illustrator.png" alt="イラストレーター">
+                                </td>
+
+                                <td> <img class="icon" src="./images/figma.png" alt="フィグマ">
+                                </td>
+                                <td> <img class="icon" src="./images/photoshop.png" alt="フォトショップ">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="icon_name">Illustrator</p>
+                                </td>
+                                <td>
+                                    <p class="icon_name">Figma</p>
+                                </td>
+
+                                <td>
+                                    <p class="icon_name">photoshop</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="sp_table middle">
+                            <tr>
+                                <td> <img class="icon_top" src="./images/canva.png" alt="キャンバ">
+                                </td>
+                                <td> <img class="icon_bottom" src="./images/github.png" alt="github">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="icon_name">canva</p>
+                                </td>
+                                <td>
+                                    <p class="icon_name">github</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="sp_table">
+                            <tr>
+                                <td> <img class="icon_middle" src="./images/html.svg" alt="HTML">
+                                </td>
+                                <td> <img class="icon_middle" src="./images/css.svg" alt="CSS">
+                                </td>
+                                <td> <img class="icon_middle" src="./images/js.svg" alt="javascript">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="icon_name">HTML</p>
+                                </td>
+
+                                <td>
+                                    <p class="icon_name">CSS</p>
+                                </td>
+                                <td>
+                                    <p class="icon_name">javascript</p>
+                                </td>
+                            </tr>
+                        </table>
+
                     </div>
                 </div>
             </div>
@@ -432,7 +514,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script>
         (() => {
             document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
+                const scroll = new LocomotiveScroll({
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
@@ -448,6 +530,22 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     }
 
                 })
+                const bg = document.querySelector('.bg')
+                const secondSection = document.querySelector('.second_section')
+                const secondSectionX = secondSection.getBoundingClientRect().x
+                // console.log(secondSectionX)
+                scroll.on('scroll', function (event) {
+                    const scrollX = event.scroll.x
+                    // console.log(scrollX)
+                    if (scrollX <= secondSectionX) {
+                        const opacity = 1 - (scrollX / secondSectionX)
+                        bg.style.opacity = opacity
+                    }
+                })
+
+
+
+
             })
         })()
 
@@ -458,6 +556,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 $('.sp_menu').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             })
+        });
+
+        $(function () {
+            $.scrollify({
+                section: ".scroll_section",
+                scrollSpeed: 1000,
+            });
         });
     </script>
 
