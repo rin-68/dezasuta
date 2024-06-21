@@ -130,7 +130,7 @@ main {
   background: #fffcf5;
   align-items: center;
   position: fixed;
-  /* right: 0px; */
+  right: 0px;
   /* 消したもの② */
   z-index: 10000;
 }
@@ -172,7 +172,7 @@ header .wrapper {
 
 @media screen and (max-width: 767px) {
   .header {
-    background: transparent;
+    right: auto;
   }
 }
 

@@ -33,7 +33,7 @@
                     <li>
                         <ul class="en here"><a href="./index.html">TOP</a></ul>
                         <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
-                        <ul class="en"><a href="./index.html">CONTACT</a></ul>
+                        <ul class="en"><a href="#contact">CONTACT</a></ul>
                     </li>
                     <div class="line"></div>
                     <li>
@@ -225,24 +225,24 @@
                         </div>
                         <form
                             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQT8L3UAJMfiiDTRGbAAKqm935UD3J8gkRpPijM-KmUQ2-sQ/formResponse"
-                            method="post" class="wrapper">
+                            method="post" target="hidden_iframe" onsubmit="submitted=true;" class="wrapper">
                             <table class="contact-table">
                                 <tr>
                                     <th>お名前</th>
                                     <td>
-                                        <input type="text" name="entry.193574675" placeholder="山田　花子">
+                                        <input type="text" name="entry.366340186" placeholder="山田　花子">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>メールアドレス</th>
                                     <td>
-                                        <input type="email" name="entry.229513772" placeholder="@">
+                                        <input type="email" name="entry.1131966218" placeholder="@">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>お問い合わせ内容</th>
                                     <td>
-                                        <textarea name="entry.1182652199" id=""></textarea>
+                                        <textarea name="entry.714382665" id=""></textarea>
                                     </td>
                                 </tr>
                             </table>
@@ -286,30 +286,34 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                         bg.style.opacity = opacity
                     }
                 })
+                function calculate() {
+                    const aboutLine = document.querySelector('.about_line')
+                    const firstSection = document.querySelector('.first_section')
+                    const secondCursive = document.querySelector('.second_cursive')
 
-                const aboutLine = document.querySelector('.about_line')
-                const firstSection = document.querySelector('.first_section')
-                const firstSectionX = firstSection.getBoundingClientRect().x + firstSection.getBoundingClientRect().right
-                // console.log(firstSectionX)
-                const secondCursive = document.querySelector('.second_cursive')
-                const secondCursiveX = secondCursive.getBoundingClientRect().x
-                // console.log(secondCursiveX)
-                const lineWidth = secondCursiveX - firstSectionX
-                // console.log(lineWidth)
-                aboutLine.style.width = lineWidth + 'px'
-                // const mediaQueryList = window.matchMedia('(min-width:768px)');
-                // mediaQueryList.addEventListener('change', (windowWidth) => {
-                //     if (windowWidth.matches) {
-                //         /**画面幅が768px以上のときの処理 */
-                //         const lineWidth = secondCursiveX - firstSectionX + 82
-                //         console.log(lineWidth)
-                //         aboutLine.style.width = lineWidth + 'px'
-                //     } else {
-                //         /**画面幅が768px以上のときの処理 */
-                //         const lineWidth = secondCursiveX - firstSectionX + 45
-                //         aboutLine.style.width = lineWidth + 'px'
-                //     }
-                // });
+                    const firstSectionX = firstSection.getBoundingClientRect().x + firstSection.getBoundingClientRect().right
+                    // console.log(firstSectionX)
+                    const secondCursiveX = secondCursive.getBoundingClientRect().x
+                    // console.log(secondCursiveX)
+                    const lineWidth = secondCursiveX - firstSectionX
+                    // console.log(lineWidth)
+                    if (window.matchMedia('(min-width:768px)')) {
+                        /**画面幅が768px以上のときの処理 */
+                        const lineWidth = secondCursiveX - firstSectionX + 82
+                        console.log(lineWidth)
+                    } else {
+                        /**画面幅が768px以上のときの処理 */
+                        const lineWidth = secondCursiveX - firstSectionX + 45
+                        console.log(lineWidth)
+                    }
+                    aboutLine.style.width = lineWidth + 'px'
+                }
+                calculate()
+                window.addEventListener('resize', () => {
+                    calculate()
+
+
+                })
 
 
             });
@@ -328,12 +332,12 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 // $('.sp_menu').fadeToggle();
                 // $('.sp_menu').toggleClass('active')
                 $('.sp_btn').toggleClass('open');
-                $('.header').toggleClass('open');
+                // $('.header').toggleClass('open');
                 // 消したら背景色がなくなる
-                $('.top_portfolioname').toggleClass('open');
+                // $('.top_portfolioname').toggleClass('open');
                 // 消したら下の横長が表示されたままになる
 
-                if ($menu.is('visible')) {
+                if ($menu.is(':visible')) {
                     $effect.addClass('show');
                     setTimeout(function () {
                         $effect.removeClass('show');
@@ -349,6 +353,11 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             })
         });
     </script>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='THANKSページのURL';}"></iframe>
 
 </body>
 
