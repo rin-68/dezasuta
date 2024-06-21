@@ -187,7 +187,7 @@
         </section>
 
         <section data-scroll-section class="scroll_section">
-            <div class="all">
+            <div class="pc_all">
                 <div class="allpage">
                     <p class="en">ALL PAGES</p>
                     <div class="a">
@@ -236,30 +236,30 @@
         <section data-scroll-section class="scroll_section forth_section">
             <div class="sp_all sliders_wrapper">
                 <!-- <div class="allpage"> -->
-                <p class="en">ALL PAGES</p>
-                <div>
-                    <img src="" alt="">
+                <p class="en slide">ALL PAGES</p>
+                <div class="images_top slide">
+                    <img src="./images/hp_cafe_all_1.jpg" alt="">
                 </div>
-                <div>
-                    <div>
+                <div class="images slide">
+                    <div class="images_left">
                         <div>
-                            <img src="" alt="">
+                            <img src="./images/hp_cafe_all_2.jpg" alt="">
                         </div>
                         <div>
-                            <img src="" alt="">
+                            <img src="./images/hp_cafe_all_3.jpg" alt="">
                         </div>
                     </div>
-                    <div>
+                    <div class="images_right">
                         <div>
-                            <img src="" alt="">
+                            <img src="./images/hp_cafe_all_4.jpg" alt="">
                         </div>
                         <div>
-                            <img src="" alt="">
+                            <img src="./images/hp_cafe_all_5.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <!-- </div> -->
-                <div class="wrapper">
+                <div class="wrapper slide">
                     <a href="">
                         <div class="btn">
                             <p class="en">CONTACT</p>
@@ -309,8 +309,22 @@
                 })
 
 
-                const container = document.querySelector()
-
+                const container = document.querySelector('.forth_section')
+                const slides = document.querySelectorAll('.slide')
+                const containerHeight = container.offsetHeight;
+                gsap.to(slides, {
+                    yPercent: -110 * (slides.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        // start: 'top top'
+                        trigger: container,
+                        pin: true,
+                        scurub: 1,
+                        end: () => '+= ${ containerHeight }',
+                        anticipatePin: 1,
+                        invalidateOnRefresh: true
+                    }
+                })
             })
         })()
 

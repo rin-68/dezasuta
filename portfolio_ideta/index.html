@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-
+            <div class="fade-effect"></div>
         </div>
     </header>
     <div class="top_portfolioname">
@@ -76,7 +76,7 @@
     <div class="bg"></div>
 
     <main data-scroll-container>
-        <section data-scroll-section class="scroll_section">
+        <section data-scroll-section class="scroll_section first_section">
             <div class="fv">
                 <div class="wrapper">
                     <h1>あなたの想いを、開花させる。</h1>
@@ -95,13 +95,16 @@
 
                         <div class="ttl">
                             <h2>わたしのこと</h2>
-                            <p class="cursive">About<br>me</p>
+                            <p class="cursive second_cursive">About<br>me</p>
                             <div class="erase"></div>
-                            <div class="ttl_line"></div>
+                            <div class="about_line"></div>
                         </div>
                         <div class="about_content">
-                            <div>
+                            <div class="img">
                                 <img src="./images/profile@2x.png" alt="プロフィール写真">
+                            </div>
+                            <div class="sp_img">
+                                <img src="./images/flower001.png" alt="">
                             </div>
                             <div>
                                 <div class="txt_bg">
@@ -126,7 +129,7 @@
             </div>
         </section>
 
-        <section data-scroll-section class="scroll_section">
+        <section data-scroll-section class="scroll_section third_section">
             <div class="works">
                 <div class="first_contents">
                     <div class="wrapper">
@@ -139,6 +142,7 @@
                         <div class="hp">
                             <div class="hp_square">
                                 <h3>WEB SITE</h3>
+                                <div class="sp_ttl_line"></div>
                                 <div class="hp_img">
                                     <img src="./images/hp_cafe_FV-80.jpg" alt="WEBSITEのFV画像">
                                 </div>
@@ -160,6 +164,8 @@
                         <div class="lp">
                             <div class="lp_square">
                                 <h3>LANDING PAGE</h3>
+                                <div class="sp_ttl_line"></div>
+
                                 <div class="lp_img">
                                     <img src="./images/lp_usazemi_FV.jpg" alt="LANDINGPAGEのFV画像">
                                 </div>
@@ -180,6 +186,8 @@
                     <div class="wrapper">
                         <div class="bn_square">
                             <h3>BANNER</h3>
+                            <div class="sp_ttl_line"></div>
+
                             <div class="bn_img">
                                 <img src="./images/bn_supaisukennkyuujyo_1.jpg" alt="BANNERのFV画像">
                             </div>
@@ -198,7 +206,7 @@
             </div>
         </section>
 
-        <section data-scroll-section class="scroll_section">
+        <section data-scroll-section class="scroll_section forth_section">
             <div class="contact" id="contact">
                 <div class="wrapper">
                     <div class="top_contents">
@@ -259,15 +267,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     tablet: {
                         direction: 'horizontal',
                         smooth: true,
-
                     },
                     smartphone: {
                         direction: 'horizontal',
                         smooth: true,
-
                     }
-
                 })
+
                 const bg = document.querySelector('.bg')
                 const secondSection = document.querySelector('.second_section')
                 const secondSectionX = secondSection.getBoundingClientRect().x
@@ -280,22 +286,64 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                         bg.style.opacity = opacity
                     }
                 })
-                const secondSectionXStart = secondSection.getBoundingClientRect().x
 
-            })
+                const aboutLine = document.querySelector('.about_line')
+                const firstSection = document.querySelector('.first_section')
+                const firstSectionX = firstSection.getBoundingClientRect().x + firstSection.getBoundingClientRect().right
+                // console.log(firstSectionX)
+                const secondCursive = document.querySelector('.second_cursive')
+                const secondCursiveX = secondCursive.getBoundingClientRect().x
+                // console.log(secondCursiveX)
+                const lineWidth = secondCursiveX - firstSectionX
+                // console.log(lineWidth)
+                aboutLine.style.width = lineWidth + 'px'
+                // const mediaQueryList = window.matchMedia('(min-width:768px)');
+                // mediaQueryList.addEventListener('change', (windowWidth) => {
+                //     if (windowWidth.matches) {
+                //         /**画面幅が768px以上のときの処理 */
+                //         const lineWidth = secondCursiveX - firstSectionX + 82
+                //         console.log(lineWidth)
+                //         aboutLine.style.width = lineWidth + 'px'
+                //     } else {
+                //         /**画面幅が768px以上のときの処理 */
+                //         const lineWidth = secondCursiveX - firstSectionX + 45
+                //         aboutLine.style.width = lineWidth + 'px'
+                //     }
+                // });
+
+
+            });
+
         })()
+
 
     </script>
 
     <script>
         $(function () {
+            const $effect = $('.fade-effect');
+            const $menu = $('.sp_menu');
             $('.sp_btn').on('click', function () {
 
                 // $('.sp_menu').fadeToggle();
-                $('.sp_menu').toggleClass('active')
+                // $('.sp_menu').toggleClass('active')
                 $('.sp_btn').toggleClass('open');
-                $('.header').toggleClass('open');
-                $('.top_portfolioname').toggleClass('open');
+                // $('.header').toggleClass('open');
+                // $('.top_portfolioname').toggleClass('open');
+
+                if ($menu.is('visible')) {
+                    $effect.addClass('show');
+                    setTimeout(function () {
+                        $('.fade-effect').removeClass('show');
+                        Smenu.hide();
+                    }, 500)
+                } else {
+                    $effect.addClass('show');
+                    setTimeout(function () {
+                        $('.fade-effect').removeClass('show');
+                        $menu.show();
+                    }, 500)
+                }
             })
         });
     </script>

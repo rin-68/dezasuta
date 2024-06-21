@@ -211,12 +211,12 @@ h2 {
   left: 70px;
 }
 
-.ttl_line {
-  width: 1740%;
+.about_line {
+  width: auto;
   border-bottom: 1px solid #ec6c4e;
   position: absolute;
-  top: 200px;
-  left: -1700%;
+  top: 203px;
+  right: 40px;
   z-index: 40;
 }
 
@@ -225,17 +225,21 @@ h2 {
   position: relative;
 }
 
-.about_content > div:nth-child(2) {
+.about_content > div:nth-child(3) {
   /* div複数あるので直下にしないと違うところにもかかる */
   position: absolute;
   top: 0px;
   left: 278px;
 }
 
-.about_content img {
+.about_content .img img {
   height: 400px;
   object-fit: contain;
   z-index: 10;
+}
+
+.about_content .sp_img {
+  display: none;
 }
 
 .txt_bg {
@@ -275,7 +279,7 @@ h2 {
     margin-right: 28px;
   }
 
-  .about_content > div:nth-child(2) {
+  .about_content > div:nth-child(3) {
     left: 245px;
   }
 
@@ -295,6 +299,10 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+  .about {
+    background-image: none;
+  }
+
   .top_contents {
     display: flex;
     flex-direction: column;
@@ -324,13 +332,22 @@ h2 {
     width: 278px;
   }
 
-  .about_content > div:nth-child(2) {
+  .about_content > div:nth-child(3) {
     top: 300px;
     left: 0px;
   }
 
-  .about_content img {
+  .about_content .img img {
     height: 292px;
+  }
+
+  .about_content .sp_img {
+    display: block;
+    width: 140px;
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 107px;
+    left: -45px;
   }
 
   .txt_bg {
@@ -381,6 +398,10 @@ h3 {
   font-size: 30px;
   letter-spacing: 0.2em;
   text-align: right;
+}
+
+.hp .sp_ttl_line {
+  display: none;
 }
 
 @media screen and (max-width: 1100px) {
@@ -442,6 +463,10 @@ h3 {
   left: -77px;
   border-bottom: solid 1px #ec6c4e;
   z-index: 100;
+}
+
+.hp .sp_ttl_line {
+  display: none;
 }
 
 .hp_img {
@@ -530,6 +555,17 @@ h3 {
     /* z-index: 100; */
   }
 
+  .hp .sp_ttl_line {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #ec6c4e;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 261px;
+    left: 225px;
+  }
+
   .hp_img {
     width: 287px;
     /* height: 0px; */
@@ -575,6 +611,10 @@ h3 {
   left: -95%;
   border-bottom: solid 1px #ec6c4e;
   z-index: 200;
+}
+
+.lp .sp_ttl_line {
+  display: none;
 }
 
 .lp_img {
@@ -644,6 +684,17 @@ h3 {
     /* z-index: 200; */
   }
 
+  .lp .sp_ttl_line {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #ec6c4e;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 375px;
+    left: 190px;
+  }
+
   .lp_img {
     width: 173px;
     /* position: absolute; */
@@ -691,6 +742,10 @@ h3 {
   left: -70%;
   border-bottom: solid 1px #ec6c4e;
   z-index: 300;
+}
+
+.bn_square .sp_ttl_line {
+  display: none;
 }
 
 .bn_img {
@@ -748,6 +803,17 @@ h3 {
     /* z-index: 300; */
   }
 
+  .bn_square .sp_ttl_line {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #ec6c4e;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 260px;
+    left: 179px;
+  }
+
   .bn_img {
     width: 217px;
     position: absolute;
@@ -771,10 +837,10 @@ h3 {
   display: flex;
   height: 100%;
   align-items: center;
-  /* background-image: url(../images/contact_img.png); */
-  background-size: 33%;
-  /* background-repeat: no-repeat; */
-  background-position: 12% 425px;
+  background-image: url(../images/contact_img.png);
+  background-size: 88%;
+  background-repeat: no-repeat;
+  background-position: 57% bottom;
 }
 
 .contact .wrapper {
@@ -813,8 +879,8 @@ form {
 }
 
 .contact-table {
-  width: 60vw;
-  min-width: 650px;
+  width: 49vw;
+  /* min-width: 650px; */
   /* 1番小さいのでいいから475でもOK */
   margin-bottom: 20px;
   padding-right: 5%;
@@ -854,7 +920,7 @@ textarea {
 @media screen and (max-width: 1100px) {
   .contact-table {
     min-width: 475px;
-    padding-right: 8%;
+    padding-right: 17%;
   }
 }
 
@@ -864,9 +930,9 @@ textarea {
     height: 100%;
     align-items: center; */
     /* background-image: url(../images/contact_img.png); */
-    background-size: 33%;
+    background-size: 99%;
     /* background-repeat: no-repeat; */
-    background-position: 12% 425px;
+    background-position: 12% 90%;
   }
 
   .contact .wrapper {
