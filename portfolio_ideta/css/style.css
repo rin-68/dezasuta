@@ -888,7 +888,9 @@ form {
 
 th {
   text-align: left;
+  vertical-align: baseline;
   width: 20%;
+  padding-top: 20px;
 }
 
 td {

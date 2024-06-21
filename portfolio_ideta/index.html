@@ -328,19 +328,21 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 // $('.sp_menu').fadeToggle();
                 // $('.sp_menu').toggleClass('active')
                 $('.sp_btn').toggleClass('open');
-                // $('.header').toggleClass('open');
-                // $('.top_portfolioname').toggleClass('open');
+                $('.header').toggleClass('open');
+                // 消したら背景色がなくなる
+                $('.top_portfolioname').toggleClass('open');
+                // 消したら下の横長が表示されたままになる
 
                 if ($menu.is('visible')) {
                     $effect.addClass('show');
                     setTimeout(function () {
-                        $('.fade-effect').removeClass('show');
-                        Smenu.hide();
+                        $effect.removeClass('show');
+                        $menu.hide();
                     }, 500)
                 } else {
                     $effect.addClass('show');
                     setTimeout(function () {
-                        $('.fade-effect').removeClass('show');
+                        $effect.removeClass('show');
                         $menu.show();
                     }, 500)
                 }
