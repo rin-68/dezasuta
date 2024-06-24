@@ -1,9 +1,4 @@
 @charset "UTF-8";
-
-.main {
-  overflow: hidden !important;
-}
-
 .bg {
   position: fixed;
   top: 0;
@@ -17,17 +12,6 @@
   opacity: 1;
 }
 
-/* main {
-  overflow: hidden;
-  overflow-x: scroll;
-
-  scroll-snap-type: x mandatory;
-} */
-
-/* section {
-  scroll-snap-align: start;
-} */
-
 body {
   width: 100vw;
   background-color: #fffcf5;
@@ -35,8 +19,15 @@ body {
 }
 
 main {
+  overflow: hidden !important;
+  scroll-snap-type: x mandatory;
+  overflow: scroll;
   background-color: #fffcf5;
   height: 100%;
+}
+
+section {
+  scroll-snap-align: center;
 }
 
 .wrapper {
@@ -88,13 +79,28 @@ main {
   z-index: 10001;
 }
 
+.top_portfolioname span {
+  color: #ec6c4e;
+}
+
 .top_portfolioname p {
   writing-mode: vertical-rl;
   margin: 0 auto;
+  animation: loop-animation 40s linear infinite;
+  white-space: nowrap;
 }
 
 .top_portfolioname span {
   color: #ec6c4e;
+}
+
+@keyframes loop-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }
 
 @media screen and (max-width: 767px) {
