@@ -1,10 +1,8 @@
 @charset "UTF-8";
 
-/* .main {
-  overflow: auto;
-  scroll-snap-type: mandatory;
-  display: flex;
-} */
+.main {
+  overflow: hidden !important;
+}
 
 .bg {
   position: fixed;
@@ -33,6 +31,7 @@
 body {
   width: 100vw;
   background-color: #fffcf5;
+  overflow-y: hidden;
 }
 
 main {
