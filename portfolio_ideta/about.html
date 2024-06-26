@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdetaKaori's Portfolio</title>
+    <title>Kaori's Portfolio</title>
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/about.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- CDN Scrollify セクションごとにスクロール -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
 
     <script>
         (function (d) {
@@ -29,22 +27,25 @@
 </head>
 
 <body>
+
+    <!-- 右固定ナビゲーション -->
+
     <header>
         <div class="header">
             <div class="wrapper">
                 <nav class="pc_nav">
-                    <li>
-                        <ul class="en"><a href="./index.html">TOP</a></ul>
-                        <ul class="en here"><a href="./about.html">ABOUT ME</a></ul>
-                        <ul class="en"><a href="./index.html">CONTACT</a></ul>
-                    </li>
-                    <div class="line"></div>
-                    <li>
-                        <ul class="en"><a href="./works_hp.html">HP</a></ul>
-                        <ul class="en"><a href="./works_lp.html">LP</a></ul>
-                        <ul class="en"><a href="./works_bn.html">BANNER</a></ul>
-                        <ul class="en">WORKS</ul>
-                    </li>
+                    <ul>
+                        <li class="en here"><a href="./index.html">TOP</a></li>
+                        <li class="en"><a href="./about.html">ABOUT ME</a></li>
+                        <li class="en"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                    <div class="line_vertical"></div>
+                    <ul>
+                        <li class="en"><a href="./works_hp.html">HP</a></li>
+                        <li class="en"><a href="./works_lp.html">LP</a></li>
+                        <li class="en"><a href="./works_bn.html">BANNER</a></li>
+                        <li class="en not_btn">WORKS</li>
+                    </ul>
                 </nav>
             </div>
             <div class="sp_btn"><span></span></div>
@@ -55,14 +56,14 @@
                     </div>
                     <div class="content">
                         <nav class="sp_nav">
-                            <li>
-                                <ul class="en"><a href="./index.html">TOP</a></ul>
-                                <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
-                                <ul class="en"><a href="./works_hp.html">HP<span>WORKS</span></a></ul>
-                                <ul class="en"><a href="./works_lp.html">LP<span>WORKS</span></a></ul>
-                                <ul class="en"><a href="./works_bn.html">BANNER<span>WORKS</span></a></ul>
-                                <ul class="en"><a href="./index.html">CONTACT</a></ul>
-                            </li>
+                            <ul>
+                                <li class="en"><a href="./index.html">TOP</a></li>
+                                <li class="en"><a href="./about.html">ABOUT ME</a></li>
+                                <li class="en"><a href="./works_hp.html">HP<span>WORKS</span></a></li>
+                                <li class="en"><a href="./works_lp.html">LP<span>WORKS</span></a></li>
+                                <li class="en"><a href="./works_bn.html">BANNER<span>WORKS</span></a></li>
+                                <li class="en"><a href="./contact.html">CONTACT</a></li>
+                            </ul>
                         </nav>
                         <div class="triangle_top"></div>
                         <div class="triangle_bottom"></div>
@@ -73,12 +74,18 @@
 
         </div>
     </header>
+
+    <!-- 左固定アニメーション -->
+
     <div class="top_portfolioname">
         <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.</p>
     </div>
     <div class="bg"></div>
 
     <main data-scroll-container>
+
+        <!-- プロフィール -->
+
         <section data-scroll-section class="scroll_section">
             <div class="profile">
                 <div class="wrapper">
@@ -91,21 +98,27 @@
                             <div class="ttl_line"></div>
                         </div>
                         <div class="pc_txt">
-                            <p>大阪府出身、1991年生まれ。結婚を機に、25年過ごした大阪を離れて関東へ。<br>
-                                今は埼玉県にある昨年建てた一軒家で、夫と２人の息子の４人暮らし。<br><br>
-                                子どもの頃から絵を描くことや綺麗なものを見ることが好き。なんとなく過ごしてきましたが、今振り返ると「絵」や「イラスト」が常に側にある生活をしてきて、デザイナーを目指すのは必然のように感じます。<br><br>
-                                もう１つ好きなものが医療。大阪大学を卒業後、看護師として移植医療を行う外科病棟と小児集中治療室、小児クリニックや保育園看護師など、主に小児医療を中心に経験してきました。特殊な環境下に置かれた子どもの気持ちやその家族の想いを汲み取り、安心してもらえるよう配慮することを大切に。私の周りはいつも子どもやその家族の笑顔でいっぱいでした。これが私の天職だ、と仕事にやりがいも感じています。<br><br>
-                                そんな私に転機が訪れたのは、自分の結婚式でプロフィールブックとウェルカムボードを自作した時。こんなに楽しいことを仕事にできたら、もっと人生楽しくなると考えました。そして、その後出会ったのが「Webデザイナー」です。
-                            </p>
+                            <p><span class="slide-in leftAnime">
+                                    <span
+                                        class="slide-in_inner leftAnimeInner">大阪府出身、1991年生まれ。結婚を機に、25年過ごした大阪を離れて関東へ。<br>
+                                        今は埼玉県にある昨年建てた一軒家で、夫と２人の息子の４人暮らし。<br><br>
+                                        子どもの頃から絵を描くことや綺麗なものを見ることが好き。なんとなく過ごしてきましたが、今振り返ると「絵」や「イラスト」が常に側にある生活をしてきて、デザイナーを目指すのは必然のように感じます。<br><br>
+                                        もう１つ好きなものが医療。大阪大学を卒業後、看護師として移植医療を行う外科病棟と小児集中治療室、小児クリニックや保育園看護師など、主に小児医療を中心に経験してきました。特殊な環境下に置かれた子どもの気持ちやその家族の想いを汲み取り、安心してもらえるよう配慮することを大切に。私の周りはいつも子どもやその家族の笑顔でいっぱいでした。これが私の天職だ、と仕事にやりがいも感じています。<br><br>
+                                        そんな私に転機が訪れたのは、自分の結婚式でプロフィールブックとウェルカムボードを自作した時。こんなに楽しいことを仕事にできたら、もっと人生楽しくなると考えました。そして、その後出会ったのが「Webデザイナー」です。
+                                    </span></span></p>
                         </div>
                         <div class="sp_txt">
-                            <p>大阪府出身、1991年生まれ。結婚を機に、25年過ごした大阪を離れて関東へ。<br>
-                                今は埼玉県にある昨年建てた一軒家で、夫と２人の息子の４人暮らし。<br><br>
-                                子どもの頃から絵を描くことや綺麗なものを見ることが好き。なんとなく過ごしてきましたが、今振り返ると「絵」や「イラスト」が常に側にある生活をしてきて、デザイナーを目指すのは必然のように感じます。<br><br>
-                            </p>
-                            <p> もう１つ好きなものが医療。大阪大学を卒業後、看護師として移植医療を行う外科病棟と小児集中治療室、小児クリニックや保育園看護師など、主に小児医療を中心に経験してきました。特殊な環境下に置かれた子どもの気持ちやその家族の想いを汲み取り、安心してもらえるよう配慮することを大切に。私の周りはいつも子どもやその家族の笑顔でいっぱいでした。これが私の天職だ、と仕事にやりがいも感じています。<br><br>
-                                そんな私に転機が訪れたのは、自分の結婚式でプロフィールブックとウェルカムボードを自作した時。こんなに楽しいことを仕事にできたら、もっと人生楽しくなると考えました。そして、その後出会ったのが「Webデザイナー」です。
-                            </p>
+                            <p><span class="slide-in leftAnime">
+                                    <span
+                                        class="slide-in_inner leftAnimeInner">大阪府出身、1991年生まれ。結婚を機に、25年過ごした大阪を離れて関東へ。<br>
+                                        今は埼玉県にある昨年建てた一軒家で、夫と２人の息子の４人暮らし。<br><br>
+                                        子どもの頃から絵を描くことや綺麗なものを見ることが好き。なんとなく過ごしてきましたが、今振り返ると「絵」や「イラスト」が常に側にある生活をしてきて、デザイナーを目指すのは必然のように感じます。<br><br>
+                                    </span></span></p>
+                            <p><span class="slide-in leftAnime">
+                                    <span class="slide-in_inner leftAnimeInner">
+                                        もう１つ好きなものが医療。大阪大学を卒業後、看護師として移植医療を行う外科病棟と小児集中治療室、小児クリニックや保育園看護師など、主に小児医療を中心に経験してきました。特殊な環境下に置かれた子どもの気持ちやその家族の想いを汲み取り、安心してもらえるよう配慮することを大切に。私の周りはいつも子どもやその家族の笑顔でいっぱいでした。これが私の天職だ、と仕事にやりがいも感じています。<br><br>
+                                        そんな私に転機が訪れたのは、自分の結婚式でプロフィールブックとウェルカムボードを自作した時。こんなに楽しいことを仕事にできたら、もっと人生楽しくなると考えました。そして、その後出会ったのが「Webデザイナー」です。
+                                    </span></span></p>
                         </div>
                     </div>
                     <div class="second_contents">
@@ -124,6 +137,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- ヒストリー -->
+
         <section data-scroll-section class="scroll_section second_section">
             <div class="history">
                 <div class="wrapper">
@@ -137,22 +153,22 @@
                         </div>
 
                         <!-- <p>デザインスキル</p> -->
-                        <div class="contents">
+                        <div class="contents delayScroll">
                             <div class="img"><img src="./images/gragh.png" alt=""></div>
 
-                            <div class="content">
+                            <div class="content history_box">
                                 <h3>保育園</h3>
                                 <p class="txt">絵を習い、動物園でフラミンゴの絵を描く<br>
                                     英会話を習う（ここから十年）</p>
                                 <div class="line_diagonal"></div>
                             </div>
-                            <div class="content">
+                            <div class="content history_box">
                                 <h3>小学校</h3>
                                 <p class="txt">「愛鳥週間」のコンテストで燕の絵を描き、入賞する<br>
                                     夏休みの工作を楽しみに過ごす</p>
                                 <div class="line_diagonal"></div>
                             </div>
-                            <div class="content">
+                            <div class="content history_box">
                                 <h3>中学校</h3>
                                 <p class="txt">アニメにハマる<br>
                                     夜中はパソコンで必死にキャラクターを描く<br>
@@ -160,20 +176,20 @@
                                 </p>
                                 <div class="line_diagonal"></div>
                             </div>
-                            <div class="content">
+                            <div class="content history_box">
                                 <h3>高校</h3>
                                 <p class="txt">受験勉強する<br>
                                     仲のいい子とクラスが離れてあまり記憶がない</p>
                                 <div class="line_diagonal"></div>
                             </div>
-                            <div class="content">
+                            <div class="content history_box">
                                 <h3>大学</h3>
                                 <p class="txt">飲食バイトを掛け持ち<br>
                                     軽音サークルとダンスサークルを掛け持ち<br>
                                     ただひたすら遊ぶ</p>
                                 <div class="line_diagonal"></div>
                             </div>
-                            <div>
+                            <div class="history_box">
                                 <div class="content_last">
                                     <h3>社会人</h3>
                                     <p>2000　看護師として就職<br>
@@ -195,6 +211,9 @@
 
             </div>
         </section>
+
+        <!-- スキル -->
+
         <section data-scroll-section class="scroll_section">
             <div class="skills">
                 <div class="wrapper">
@@ -360,6 +379,7 @@
             </div>
         </section>
 
+        <!-- ストレングス -->
 
         <section data-scroll-section class="scroll_section">
             <div class="strength">
@@ -400,6 +420,7 @@
             </div>
         </section>
 
+        <!-- ラブ -->
 
         <section data-scroll-section class="scroll_section">
             <div class="love">
@@ -460,6 +481,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- デザイン -->
+
         <section data-scroll-section class="scroll_section">
             <div class="design">
                 <div class="wrapper">
@@ -514,7 +538,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script>
         (() => {
             document.addEventListener('DOMContentLoaded', () => {
-                const scroll = new LocomotiveScroll({
+                const Locoscroll = new LocomotiveScroll({
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
@@ -530,11 +554,15 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     }
 
                 })
+
+
+                //＝＝＝＝背景＝＝＝＝
+
                 const bg = document.querySelector('.bg')
                 const secondSection = document.querySelector('.second_section')
                 const secondSectionX = secondSection.getBoundingClientRect().x
                 // console.log(secondSectionX)
-                scroll.on('scroll', function (event) {
+                Locoscroll.on('scroll', function (event) {
                     const scrollX = event.scroll.x
                     // console.log(scrollX)
                     if (scrollX <= secondSectionX) {
@@ -542,6 +570,99 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                         bg.style.opacity = opacity
                     }
                 })
+
+
+
+                // ＝＝＝＝文字アニメーション（流れるテキスト）＝＝＝＝
+
+                // function slideAnime() {
+                //     //====左に動くアニメーションここから===
+                //     $('.leftAnime').each(function () {
+                //         var elemPos = $(this).offset().left - 50;
+                //         var scroll = $(window).scrollLeft();
+                //         var windowWidth = $(window).width();
+                //         if (scroll >= elemPos - windowWidth) {
+                //             //左から右へ表示するクラスを付与
+                //             //テキスト要素を挟む親要素（左側）とテキスト要素を元位置でアニメーションをおこなう
+                //             $(this).addClass("slideAnimeLeftRight"); //要素を左枠外にへ移動しCSSアニメーションで左から元の位置に移動
+                //             $(this).children(".leftAnimeInner").addClass("slideAnimeRightLeft");  //子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+                //         } else {
+                //             //左から右へ表示するクラスを取り除く
+                //             $(this).removeClass("slideAnimeLeftRight");
+                //             $(this).children(".leftAnimeInner").removeClass("slideAnimeRightLeft");
+
+                //         }
+                //     });
+
+                // }
+
+
+                const leftAnime = document.querySelector('.leftAnime')
+                console.log(leftAnime)
+                const leftAnimeX = leftAnime.getBoundingClientRect().x
+                console.log(leftAnimeX)
+                const leftAnimeInner = document.querySelectorAll('.leftAnimeInner')
+                const windowWidth = window.innerWidth
+
+                Locoscroll.on('scroll', function () {
+                    if (scrollX >= leftAnimeX - windowWidth) {
+                        leftAnime.classList.add('slideAnimeLeftRight')
+                        leftAnime.querySelector('.leftAnimeInner').classList.add('slideAnimeRightLeft')
+                    }
+                })
+
+                // locoScroll.update();
+
+
+
+
+
+                // // スクロールイベントリスナーを設定
+                // locoScroll.on("scroll", function (event) {
+                //     slideAnime(event.scroll.x); // 横スクロール位置を取得
+                // });
+
+                // function slideAnime(scrollX) {
+                //     //====左に動くアニメーションここから===
+                //     document.querySelectorAll('.leftAnime').forEach(function (el) {
+                //         const elemPos = el.getBoundingClientRect().left + window.scrollX - 50;
+                //         const windowWidth = window.innerWidth;
+
+                //         if (scrollX >= elemPos - windowWidth) {
+                //             // 左から右へ表示するクラスを付与
+                //             el.classList.add("slideAnimeLeftRight"); // 要素を左枠外にへ移動しCSSアニメーションで左から元の位置に移動
+                //             el.querySelector(".leftAnimeInner").classList.add("slideAnimeRightLeft");  // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+                //         } else {
+                //             // 左から右へ表示するクラスを取り除く
+                //             el.classList.remove("slideAnimeLeftRight");
+                //             el.querySelector(".leftAnimeInner").classList.remove("slideAnimeRightLeft");
+                //         }
+                //     });
+                // }
+
+                // // 初期ロード時にアニメーションを適用
+                // locoScroll.update();
+
+
+
+
+
+                // // 画面をスクロールをしたら動かしたい場合の記述
+                // $(window).scroll(function () {
+                //     slideAnime();/* アニメーション用の関数を呼ぶ*/
+                // });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+                // // 画面が読み込まれたらすぐに動かしたい場合の記述
+                // $(window).on('load', function () {
+                //     slideAnime();/* アニメーション用の関数を呼ぶ*/
+                // });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+
+
+
+
+
+
 
 
 
@@ -558,12 +679,63 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             })
         });
 
-        $(function () {
-            $.scrollify({
-                section: ".scroll_section",
-                scrollSpeed: 1000,
-            });
-        });
+    </script>
+
+    <script>
+
+
+        //＝＝＝＝ヒストリーのグラフが横からフェードインする＝＝＝＝
+
+        function delayScrollAnime() {
+            var time = 0.2;//遅延時間を増やす秒数の値
+            var value = time;
+            $('.delayScroll').each(function () {
+                var parent = this;					//親要素を取得
+                console.log(parent)
+                var elemPos = $(this).offset().left;//要素の位置まで来たら
+                console.log(elemPos)
+                var scroll = $(window).scrollLeft();//スクロール値を取得
+                console.log(scroll)//スクロールしても動いてない、０のまま
+                var windowWidth = $(window).width();//画面の高さを取得
+                console.log(windowWidth)
+                var childs = $(this).children();	//子要素を取得
+                console.log(childs)
+
+                if (scroll >= elemPos - windowWidth && !$(parent).hasClass("play")) {//指定領域内にスクロールが入ったらまた親要素にクラスplayがなければ
+                    $(childs).each(function () {
+
+                        if (!$(this).hasClass("history_fadein")) {//アニメーションのクラス名が指定されているかどうかをチェック
+
+                            $(parent).addClass("play");	//親要素にクラス名playを追加
+                            $(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
+                            $(this).addClass("history_fadein");//アニメーションのクラス名を追加
+                            value = value + time;//delay時間を増加させる
+
+                            //全ての処理を終わったらplayを外す
+                            var index = $(childs).index(this);
+                            if ((childs.length - 1) == index) {
+                                $(parent).removeClass("play");
+                            }
+                        }
+                    })
+                } else {
+                    $(childs).removeClass("history_fadein");//アニメーションのクラス名を削除
+                    value = time;//delay初期値の数値に戻す
+                }
+            })
+        }
+
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
+            delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+
     </script>
 
 </body>

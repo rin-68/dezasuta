@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdetaKaori's Portfolio</title>
+    <title>Kaori's Portfolio</title>
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
@@ -25,23 +25,41 @@
     </script>
 </head>
 
+
 <body>
+
+    <!-- ローディング画面 -->
+
+    <div class="loading_animation">
+        <strong class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </strong>
+    </div>
+
+    <!-- 右固定ナビゲーション -->
+
     <header>
         <div class="header">
             <div class="wrapper">
                 <nav class="pc_nav">
-                    <li>
-                        <ul class="en here"><a href="./index.html">TOP</a></ul>
-                        <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
-                        <ul class="en"><a href="#contact">CONTACT</a></ul>
-                    </li>
-                    <div class="line"></div>
-                    <li>
-                        <ul class="en"><a href="./works_hp.html">HP</a></ul>
-                        <ul class="en"><a href="./works_lp.html">LP</a></ul>
-                        <ul class="en"><a href="./works_bn.html">BANNER</a></ul>
-                        <ul class="en">WORKS</ul>
-                    </li>
+                    <ul class="pc-nav_list">
+                        <li class="en here"><a href="./index.html">TOP</a></li>
+                        <li class="en"><a href="./about.html">ABOUT ME</a></li>
+                        <li class="en"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                    <div class="line_vertical"></div>
+                    <ul class="pc-nav_list">
+                        <li class="en"><a href="./works_hp.html">HP</a></li>
+                        <li class="en"><a href="./works_lp.html">LP</a></li>
+                        <li class="en"><a href="./works_bn.html">BANNER</a></li>
+                        <li class="en not_btn">WORKS</li>
+                    </ul>
                 </nav>
             </div>
             <div class="sp_btn"><span></span></div>
@@ -52,14 +70,14 @@
                     </div>
                     <div class="content">
                         <nav class="sp_nav">
-                            <li>
-                                <ul class="en"><a href="./index.html">TOP</a></ul>
-                                <ul class="en"><a href="./about.html">ABOUT ME</a></ul>
-                                <ul class="en"><a href="./works_hp.html">HP<span>WORKS</span></a></ul>
-                                <ul class="en"><a href="./works_lp.html">LP<span>WORKS</span></a></ul>
-                                <ul class="en"><a href="./works_bn.html">BANNER<span>WORKS</span></a></ul>
-                                <ul class="en"><a href="./index.html">CONTACT</a></ul>
-                            </li>
+                            <ul>
+                                <li class="en current"><a href="./index.html">TOP</a></li>
+                                <li class="en"><a href="./about.html">ABOUT ME</a></li>
+                                <li class="en"><a href="./works_hp.html">HP<span>WORKS</span></a></li>
+                                <li class="en"><a href="./works_lp.html">LP<span>WORKS</span></a></li>
+                                <li class="en"><a href="./works_bn.html">BANNER<span>WORKS</span></a></li>
+                                <li class="en"><a href="./contact.html">CONTACT</a></li>
+                            </ul>
                         </nav>
                         <div class="triangle_top"></div>
                         <div class="triangle_bottom"></div>
@@ -70,6 +88,9 @@
             <div class="fade-effect"></div>
         </div>
     </header>
+
+    <!-- 左固定アニメーション -->
+
     <div class="top_portfolioname">
         <p class="en">THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S PORTFORIO</span>.THANKS TO COMING. THIS IS THE
             <span>IDETA KAORI’S PORTFORIO</span>.THANKS TO COMING. THIS IS THE <span>IDETA KAORI’S
@@ -81,6 +102,9 @@
     <div class="bg"></div>
 
     <main data-scroll-container>
+
+        <!-- メインビジュアル -->
+
         <section data-scroll-section class="scroll_section first_section">
             <div class="fv">
                 <div class="wrapper">
@@ -88,10 +112,11 @@
                     <div>
                         <p>WEB DESIGN</p>
                     </div>
-                    <!-- <img src="./images/FV_img.png"> -->
                 </div>
             </div>
         </section>
+
+        <!-- アバウト -->
 
         <section data-scroll-section class="scroll_section second_section">
             <div class="about">
@@ -99,7 +124,7 @@
                     <div class="top_contents">
 
                         <div class="ttl">
-                            <h2>わたしのこと</h2>
+                            <h2 class="eachTextAnime">わたしのこと</h2>
                             <p class="cursive second_cursive">About<br>me</p>
                             <div class="erase"></div>
                             <div class="about_line"></div>
@@ -119,7 +144,7 @@
                                             2023年9月、2人目育休中にWebデザインを独学で勉強し始め、その後デザスタにて学ぶ。デザインの力で、周りの人たちを笑顔にしたい。</p>
                                     </div>
                                 </div>
-                                <a href="">
+                                <a href="./about.html" class="float">
                                     <div class="btn">
                                         <p>もっと<br>知りたい</p>
                                         <div class="arrow_right"></div>
@@ -133,6 +158,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- ワークス・ホームページ -->
 
         <section data-scroll-section class="scroll_section third_section">
             <div class="works">
@@ -151,7 +178,7 @@
                                 <div class="hp_img">
                                     <img src="./images/hp_cafe_FV-80.jpg" alt="WEBSITEのFV画像">
                                 </div>
-                                <a class="hp_link" href="">
+                                <a class="hp_link float" href="./works_hp.html">
                                     <div class="btn">
                                         <p>もっと<br>知りたい</p>
                                         <div class="arrow_right"></div>
@@ -163,6 +190,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- ランディングページ -->
 
                 <div class="second_contents">
                     <div class="wrapper">
@@ -174,7 +203,7 @@
                                 <div class="lp_img">
                                     <img src="./images/lp_usazemi_FV.jpg" alt="LANDINGPAGEのFV画像">
                                 </div>
-                                <a href="">
+                                <a href="./works_lp.html" class="float">
                                     <div class="btn">
                                         <p>もっと<br>知りたい</p>
                                         <div class="arrow_right"></div>
@@ -187,6 +216,8 @@
                     </div>
                 </div>
 
+                <!-- バナー -->
+
                 <div class="third_contents">
                     <div class="wrapper">
                         <div class="bn_square">
@@ -196,7 +227,7 @@
                             <div class="bn_img">
                                 <img src="./images/bn_supaisukennkyuujyo_1.jpg" alt="BANNERのFV画像">
                             </div>
-                            <a href="">
+                            <a href="./works_bn.html" class="float">
                                 <div class="btn">
                                     <p>もっと<br>知りたい</p>
                                     <div class="arrow_right"></div>
@@ -210,6 +241,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- コンタクト -->
 
         <section data-scroll-section class="scroll_section forth_section">
             <div class="contact" id="contact">
@@ -251,7 +284,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <input class="submit" type="submit" value="送信する">
+                            <input class="submit float" type="submit" value="送信する">
 
                         </form>
                     </div>
@@ -265,7 +298,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script>
         (() => {
             document.addEventListener('DOMContentLoaded', () => {
-                const scroll = new LocomotiveScroll({
+                const Locoscroll = new LocomotiveScroll({
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
@@ -279,11 +312,16 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     }
                 })
 
+
+
+                // ＝＝＝＝背景を２つ目のセクションに移動したら消す＝＝＝＝
+
+
                 const bg = document.querySelector('.bg')
                 const secondSection = document.querySelector('.second_section')
                 const secondSectionX = secondSection.getBoundingClientRect().x
                 // console.log(secondSectionX)
-                scroll.on('scroll', function (event) {
+                Locoscroll.on('scroll', function (event) {
                     const scrollX = event.scroll.x
                     // console.log(scrollX)
                     if (scrollX <= secondSectionX) {
@@ -291,6 +329,12 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                         bg.style.opacity = opacity
                     }
                 })
+
+
+
+                // ＝＝＝＝セクションを繋ぐ直線を計算して表示する＝＝＝＝
+
+
                 function calculate() {
                     const aboutLine = document.querySelector('.about_line')
                     const firstSection = document.querySelector('.first_section')
@@ -318,6 +362,10 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     calculate()
                 })
 
+
+
+                // ＝＝＝＝CONTACTに飛ばす＝＝＝＝
+
                 const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
 
                 anchorLinks.forEach((anchorLink) => {
@@ -328,9 +376,61 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                         e.preventDefault();
                         e.stopPropagation();
 
-                        scroll.scrollTo(target);
+                        Locoscroll.scrollTo(target);
                     })
                 })
+
+
+
+
+                // ＝＝＝＝文字アニメーション 一文字ずつ現れる＝＝＝＝
+
+
+                // eachTextAnimeにappeartextというクラス名を付ける定義
+                // function EachTextAnimeControl() {
+                //     $('.eachTextAnime').each(function () {
+                //         var elemPos = $(this).offset().left - 50;
+                //         var scroll = $(window).scrollLeft();
+                //         var windowWidth = $(window).Width();
+                //         if (scroll >= elemPos - windowWidth) {
+                //             $(this).addClass("appeartext");
+
+                //         } else {
+                //             $(this).removeClass("appeartext");
+                //         }
+                //     });
+                // }
+
+                // 画面をスクロールをしたら動かしたい場合の記述
+                $(window).scroll(function () {
+                    EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+                });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+                // 画面が読み込まれたらすぐに動かしたい場合の記述
+                $(window).on('load', function () {
+                    //spanタグを追加する
+                    var element = $(".eachTextAnime");
+                    element.each(function () {
+                        var text = $(this).text();
+                        var textbox = "";
+                        text.split('').forEach(function (t, i) {
+                            if (t !== " ") {
+                                if (i < 10) {
+                                    textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+                                } else {
+                                    var n = i / 10;
+                                    textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+                                }
+
+                            } else {
+                                textbox += t;
+                            }
+                        });
+                        $(this).html(textbox);
+                    });
+
+                    EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+                });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
 
@@ -343,18 +443,30 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     </script>
 
     <script>
+
+        $(function () {
+            function end_loading() {
+                // フェードアウトする時間
+                $('.loading_animation').fadeOut(2000);
+            }
+            $(window).on('load', function () {
+                setTimeout(function () {
+                    end_loading();
+                    // ローディング画面を表示する時間
+                }, 3000)
+            })
+        })
+
+
+
+        // SP版メニュー
+
         $(function () {
             const $effect = $('.fade-effect');
             const $menu = $('.sp_menu');
             $('.sp_btn').on('click', function () {
 
-                // $('.sp_menu').fadeToggle();
-                // $('.sp_menu').toggleClass('active')
                 $('.sp_btn').toggleClass('open');
-                // $('.header').toggleClass('open');
-                // 消したら背景色がなくなる
-                // $('.top_portfolioname').toggleClass('open');
-                // 消したら下の横長が表示されたままになる
 
                 if ($menu.is(':visible')) {
                     $effect.addClass('show');
@@ -376,7 +488,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         let submitted = false;
     </script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted){window.location='THANKSページのURL';}"></iframe>
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
 
 </body>
 

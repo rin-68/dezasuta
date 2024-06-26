@@ -1,5 +1,122 @@
 @charset "UTF-8";
 
+/* ーーーーーーーーーー
+ローディング画面
+ーーーーーーーーーー */
+
+.loading_animation {
+  background: #fffcf5;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+  margin-left: -20vh;
+  display: block;
+  width: 40vh;
+  height: 40vh;
+  text-align: center;
+  filter: contrast(1.2);
+
+  span {
+    mix-blend-mode: screen;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    animation: wave 3s infinite linear;
+  }
+
+  span:nth-child(0) {
+    left: -11%;
+    right: -2%;
+    top: -12%;
+    bottom: -5%;
+    transform-origin: 46% 53%;
+    animation-delay: 0;
+    background-color: hsl(0, 89%, 78%);
+  }
+
+  span:nth-child(1) {
+    left: -4%;
+    right: -4%;
+    top: -9%;
+    bottom: -2%;
+    transform-origin: 47% 50%;
+    animation-delay: -1s;
+    background-color: hsl(50, 49%, 69%);
+  }
+
+  span:nth-child(2) {
+    left: -11%;
+    right: -4%;
+    top: -10%;
+    bottom: -11%;
+    transform-origin: 49% 53%;
+    animation-delay: -1.5s;
+    background-color: hsl(98, 68%, 82%);
+  }
+
+  span:nth-child(3) {
+    left: -7%;
+    right: -9%;
+    top: -11%;
+    bottom: -4%;
+    transform-origin: 47% 52%;
+    animation-delay: -2s;
+    background-color: hsl(150, 80%, 75%);
+  }
+
+  span:nth-child(4) {
+    left: -8%;
+    right: -3%;
+    top: -5%;
+    bottom: -11%;
+    transform-origin: 47% 52%;
+    animation-delay: -2.5s;
+    background-color: hsl(200, 72%, 60%);
+  }
+
+  span:nth-child(5) {
+    left: -10%;
+    right: -8%;
+    top: -4%;
+    bottom: -9%;
+    transform-origin: 48% 51%;
+    animation-delay: -3s;
+    background-color: hsl(250, 54%, 70%);
+  }
+
+  span:nth-child(6) {
+    left: -9%;
+    right: -11%;
+    top: -5%;
+    bottom: -8%;
+    transform-origin: 47% 50%;
+    animation-delay: -3.5s;
+    background-color: #e4a191;
+  }
+}
+
+@keyframes wave {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
 /* ---------- ボタン「もっと知りたい」 ---------- */
 
 .btn {
@@ -7,7 +124,7 @@
   height: 120px;
   border-radius: 60px;
   background: #fff;
-  border: 1px solid #53c711;
+  /* border: 1px solid #53c711; */
   position: relative;
 }
 
@@ -18,7 +135,6 @@
   padding-top: 20px;
 }
 
-/* 矢印の交差点のズレが気になる */
 .arrow_right {
   width: 13px;
   border-bottom: 1px solid #423732;
@@ -64,7 +180,7 @@
 /* ---------- FV ---------- */
 
 .fv {
-  display: flex; /* これがないと中央配置できないのはなぜ？ */
+  display: flex;
   height: 100%;
   width: 100vw;
   align-items: center;
@@ -87,7 +203,6 @@ h1 {
 .fv > div > div {
   width: 260px;
   height: 30px;
-  /* background: #53c711; */
   margin: 34px auto auto 56%;
   z-index: 400;
 }
@@ -100,10 +215,6 @@ h1 {
   letter-spacing: 0.46em;
   padding-left: 25px;
 }
-
-/* .fv img {
-  margin: 7px auto auto 114px;
-} */
 
 @media screen and (max-width: 1100px) {
   .fv {
@@ -138,10 +249,8 @@ h1 {
   .fv > div > div {
     width: 289px;
     height: 453px;
-    /* background: #53c711; */
     margin: -363px auto 0px -226%;
     border: 1px solid #ec6c4e;
-    /* z-index: 400; */
   }
 
   .fv p {
@@ -149,11 +258,12 @@ h1 {
     letter-spacing: 0.46em;
     writing-mode: vertical-rl;
     height: 121px;
-    /* padding-left: 25px; */
   }
 }
 
-/* ---------- わたしのこと ---------- */
+/* ーーーーーーーーーー
+   わたしのこと 
+ ーーーーーーーーーー */
 
 .about {
   background-image: url(../images/flower001.png);
@@ -166,6 +276,7 @@ h1 {
 
 .about > .wrapper {
   display: flex;
+  width: 100%;
 }
 
 .top_contents {
@@ -186,9 +297,9 @@ h2 {
   letter-spacing: 0.2em;
   writing-mode: vertical-rl;
   font-feature-settings: initial;
-  /* margin-right: 15px; */
-  padding: 30px 14px 68px;
+  background: #fffcf5;
   border: 1px solid #ec6c4e;
+  padding: 30px 14px 68px;
 }
 
 .ttl p {
@@ -198,17 +309,17 @@ h2 {
   transform: rotate(-15deg);
   position: absolute;
   top: 189px;
-  left: 33px;
+  left: 40px;
   z-index: 100;
 }
 
 .erase {
-  width: 10px;
+  width: 3px;
   height: 20px;
   background: #fffcf5;
   position: absolute;
   top: 23px;
-  left: 70px;
+  left: 58px;
 }
 
 .about_line {
@@ -270,31 +381,41 @@ h2 {
   left: 230px;
 }
 
+@media screen and (min-width: 1366px) {
+  .about {
+    width: 80vw;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .about {
     background-position: 99% bottom;
+    background-size: 20%;
   }
 
-  .ttl {
-    margin-right: 28px;
+  .about .ttl {
+    margin-right: 2%;
+    margin-left: 8%;
   }
 
   .about_content > div:nth-child(3) {
-    left: 245px;
+    left: 240px;
   }
 
   .txt_bg {
-    width: 322px;
-    height: 249px;
+    width: 274px;
+    height: 257px;
+    border-radius: 41% 59% 46% 61% / 46% 53% 47% 54%;
   }
 
   .about_content .txt {
+    width: 221px;
     padding-top: 16%;
-    padding-left: 9%;
+    padding-left: 11%;
   }
 
   .about a {
-    left: 200px;
+    left: 140px;
   }
 }
 
@@ -314,15 +435,16 @@ h2 {
     color: #ec6c4e;
     writing-mode: horizontal-tb;
     padding: 74px 0px 10px;
+    background: transparent;
     border: none;
   }
 
-  .ttl p {
+  .about .ttl p {
     top: 47px;
     left: -79px;
   }
 
-  .ttl_line {
+  .about .ttl_line {
     width: 197%;
     top: 90px;
     left: -312px;
@@ -362,7 +484,9 @@ h2 {
   }
 }
 
-/* ---------- つくったもの 共通 ---------- */
+/* ーーーーーーーーーー
+   つくったもの 共通 
+ーーーーーーーーーー */
 
 .works {
   display: flex;
@@ -375,13 +499,6 @@ h2 {
   width: 100vw;
   justify-content: center;
 }
-/* .works .top_contents,
-.works .second_contents,
-.works .third_contents {
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-} */
 
 .works_line {
   width: 505%;
@@ -411,13 +528,6 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
-  /* .works {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-  } */
-
   .works .wrapper {
     display: flex;
     width: 100vw;
@@ -428,14 +538,14 @@ h3 {
 
   .works_line {
     width: 196%;
-    /* border-bottom: 1px solid #ec6c4e; */
-    /* position: absolute; */
     top: 90px;
     left: -218%;
   }
 }
 
-/* ---------- WEBSITE ---------- */
+/* ーーーーーーーーーー
+   WEBSITE 
+ーーーーーーーーーー */
 
 .first_contents {
   display: flex;
@@ -443,7 +553,7 @@ h3 {
   align-items: center;
   background-image: url(../images/flower002.png);
   background-repeat: no-repeat;
-  background-position: 97% bottom;
+  background-position: 95% bottom;
 }
 
 .hp_square {
@@ -457,7 +567,6 @@ h3 {
 
 .hp_square h3 {
   width: 222px;
-
   position: absolute;
   top: 207px;
   left: -77px;
@@ -485,9 +594,20 @@ h3 {
   right: -555px;
 }
 
+@media screen and (min-width: 1366px) {
+  .first_contents {
+    width: 80vw;
+  }
+}
+
 @media screen and (max-width: 1100px) {
+  .first_contents {
+    background-position: 91% bottom;
+    background-size: 20%;
+  }
+
   .works .ttl {
-    margin-right: 2%;
+    margin-right: 0;
   }
 
   .hp {
@@ -497,6 +617,7 @@ h3 {
 
   .hp_square {
     width: 550px;
+    margin: 71px 64px auto auto;
   }
   .hp_square h3 {
     width: 140px;
@@ -513,7 +634,8 @@ h3 {
   }
 
   .hp_square a {
-    right: -460px;
+    right: 0px;
+    left: 440px;
   }
 }
 
@@ -523,12 +645,7 @@ h3 {
   }
 
   .first_contents {
-    /* display: flex; */
-    /* height: 100%; */
-    /* align-items: center; */
-    /* background-image: url(../images/flower002.png); */
     background-size: 29%;
-    /* background-repeat: no-repeat; */
     background-position: 12% 90%;
   }
 
@@ -541,18 +658,13 @@ h3 {
     height: 10px;
     background-color: transparent;
     margin: 65px auto auto;
-    /* position: relative; */
-    /* z-index: 10; */
   }
 
   .hp_square h3 {
     padding-right: 25px;
     width: 225px;
-    /* position: absolute; */
     top: 234px;
     left: 0px;
-    /* border-bottom: solid 1px #ec6c4e; */
-    /* z-index: 100; */
   }
 
   .hp .sp_ttl_line {
@@ -568,17 +680,13 @@ h3 {
 
   .hp_img {
     width: 287px;
-    /* height: 0px; */
-    /* position: absolute; */
     top: 14px;
     left: 0px;
   }
 
   .hp_square a {
-    /* display: inline-block; */
     width: 105px;
     height: 105px;
-    /* position: relative; */
     top: 287px;
     right: -175px;
   }
@@ -592,7 +700,7 @@ h3 {
   align-items: center;
   background-image: url(../images/flower003.png);
   background-repeat: no-repeat;
-  background-position: 97% bottom;
+  background-position: 94% bottom;
 }
 
 .lp_square {
@@ -608,7 +716,7 @@ h3 {
   width: 660px;
   position: absolute;
   top: 207px;
-  left: -95%;
+  right: 193px;
   border-bottom: solid 1px #ec6c4e;
   z-index: 200;
 }
@@ -633,7 +741,18 @@ h3 {
   right: -355px;
 }
 
+@media screen and (min-width: 1366px) {
+  .second_contents {
+    width: 80vw;
+  }
+}
+
 @media screen and (max-width: 1100px) {
+  .second_contents {
+    background-position: 89% bottom;
+    background-size: 20%;
+  }
+
   .lp {
     width: 590px;
     background-size: 140px;
@@ -653,12 +772,7 @@ h3 {
   }
 
   .second_contents {
-    /* display: flex; */
-    /* height: 100%; */
-    /* align-items: center; */
-    /* background-image: url(../images/flower003.png); */
     background-size: 29%;
-    /* background-repeat: no-repeat; */
     background-position: 12% 90%;
   }
 
@@ -667,21 +781,12 @@ h3 {
     height: 10px;
     background-color: transparent;
     margin: 65px 150px 100px;
-
-    /* margin-top: 106px; */
-    /* position: relative; */
-    /* z-index: 20; */
   }
 
   .lp_square h3 {
     padding-right: 25px;
-
-    /* width: 660px; */
-    /* position: absolute; */
     top: 348px;
     left: -242%;
-    /* border-bottom: solid 1px #ec6c4e; */
-    /* z-index: 200; */
   }
 
   .lp .sp_ttl_line {
@@ -697,16 +802,13 @@ h3 {
 
   .lp_img {
     width: 173px;
-    /* position: absolute; */
     top: 17px;
     left: 0px;
   }
 
   .lp_square a {
-    /* display: inline-block; */
     width: 105px;
     height: 105px;
-    /* position: relative; */
     top: 397px;
     right: -111px;
   }
@@ -720,7 +822,7 @@ h3 {
   align-items: center;
   background-image: url(../images/flower004.png);
   background-repeat: no-repeat;
-  background-position: 97% bottom;
+  background-position: 91% bottom;
 }
 
 .bn_square {
@@ -739,7 +841,7 @@ h3 {
   width: 420px;
   position: absolute;
   top: 207px;
-  left: -70%;
+  left: -75%;
   border-bottom: solid 1px #ec6c4e;
   z-index: 300;
 }
@@ -752,7 +854,7 @@ h3 {
   width: 300px;
   position: absolute;
   top: -27px;
-  left: 0px;
+  left: 88px;
 }
 
 .bn_square a {
@@ -764,20 +866,29 @@ h3 {
   right: -369px;
 }
 
+@media screen and (min-width: 1366px) {
+  .third_contents {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .third_contents {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background-image: url(../images/flower004.png);
+    background-repeat: no-repeat;
+    background-position: 87% bottom;
+    background-size: 20%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .third_contents {
-    /* display: flex; */
-    /* height: 100%; */
-    /* align-items: center; */
-    /* background-image: url(../images/flower004.png); */
     background-size: 29%;
-    /* background-repeat: no-repeat; */
     background-position: 12% 90%;
   }
-
-  /* .third_contents .wrapper {
-    margin-top: 148px;
-  } */
 
   .bn {
     width: 375px;
@@ -787,20 +898,13 @@ h3 {
     width: 217px;
     height: 10px;
     background-color: transparent;
-    /* margin-top: 106px; */
     margin: 180px 150px 100px;
-
-    /* position: relative; */
-    /* z-index: 30; */
   }
 
   .bn_square h3 {
     width: 420px;
-    /* position: absolute; */
     top: 233px;
     left: -115%;
-    /* border-bottom: solid 1px #ec6c4e; */
-    /* z-index: 300; */
   }
 
   .bn_square .sp_ttl_line {
@@ -837,10 +941,11 @@ h3 {
   display: flex;
   height: 100%;
   align-items: center;
-  background-image: url(../images/contact_img.png);
-  background-size: 88%;
-  background-repeat: no-repeat;
-  background-position: 57% bottom;
+  background-image: url(../images/contact_img_1.png),
+    url(../images/contact_img_2.png);
+  background-size: 14%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 5% bottom, 92% bottom;
 }
 
 .contact .wrapper {
@@ -861,7 +966,7 @@ h3 {
   left: -440px;
 }
 
-.ttl {
+.contact .ttl {
   margin-right: 6%;
 }
 
@@ -880,8 +985,6 @@ form {
 
 .contact-table {
   width: 49vw;
-  /* min-width: 650px; */
-  /* 1番小さいのでいいから475でもOK */
   margin-bottom: 20px;
   padding-right: 5%;
 }
@@ -909,43 +1012,51 @@ textarea {
 }
 
 .submit {
+  color: #423732;
   width: 120px;
   height: 120px;
   border-radius: 60px;
   background: #fff;
   border: 1px solid #53c711;
-
   position: absolute;
   top: 280px;
 }
 
 @media screen and (max-width: 1100px) {
+  .contact {
+    background-size: 20%;
+    background-position: 5% bottom, 88% bottom;
+  }
+
+  .contact .ttl {
+    margin-right: 8%;
+  }
+
   .contact-table {
     min-width: 475px;
     padding-right: 17%;
+  }
+
+  th {
+    font-size: 12px;
+  }
+
+  .submit {
+    width: 95px;
+    height: 95px;
+    top: 305px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .contact {
-    /* display: flex;
-    height: 100%;
-    align-items: center; */
-    /* background-image: url(../images/contact_img.png); */
     background-size: 99%;
-    /* background-repeat: no-repeat; */
     background-position: 12% 90%;
   }
 
   .contact .wrapper {
     display: flex;
   }
-
-  /* .contact .top_contents {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-  } */
 
   .contact_line {
     width: 460px;
@@ -955,7 +1066,7 @@ textarea {
     left: -470px;
   }
 
-  .ttl {
+  .contact .ttl {
     margin-right: 0%;
   }
 
