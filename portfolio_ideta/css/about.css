@@ -15,15 +15,6 @@
   align-items: center;
 }
 
-/* .skills,
-.strength,
-.love {
-  width: 70vw;
-}
-.design {
-  width: 100vw;
-} */
-
 .profile .wrapper,
 .history .wrapper,
 .skills .wrapper,
@@ -44,6 +35,10 @@
   justify-content: center;
 }
 
+.page_ttl.about {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .skills .top_contents,
   .strength .top_contents,
@@ -51,13 +46,25 @@
   .design .top_contents {
     display: block;
   }
+
+  /* .page_ttl p:nth-of-type(2) {
+    width: 86px;
+  } */
+
+  .page_ttl.about {
+    display: block;
+  }
+
+  .page_ttl.about p:nth-of-type(1) {
+    width: 100px;
+  }
 }
 
 /* -------------------- 
    共通 セクションタイトル 
 -------------------- */
 
-.ttl {
+.pc-ttl {
   width: 60px;
   position: relative;
 }
@@ -95,21 +102,17 @@ h2 {
 }
 
 .ttl_line {
-  width: 486px;
+  /* width: 486px; */
   border-bottom: 1px solid #ec6c4e;
   position: absolute;
   bottom: 38px;
   right: 50px;
 }
 
-.history .ttl_line {
-  width: 200px;
-}
-
 @media screen and (max-width: 767px) {
-  .ttl {
+  .pc-ttl {
     width: auto;
-    position: static;
+    /* position: static; */
   }
 
   h2 {
@@ -121,22 +124,16 @@ h2 {
     position: relative;
   }
 
-  .cursive {
-    bottom: auto;
-    left: auto;
-  }
-
   .erase {
     display: none;
   }
 
-  .ttl_line {
-    width: 40px;
+  /* .ttl_line {
     top: 16px;
     bottom: auto;
-    right: auto;
+    right: 158px;
     left: 35px;
-  }
+  } */
 }
 
 /* --------------------
@@ -156,8 +153,16 @@ h2 {
   gap: 10%;
 }
 
-.profile .ttl {
+.profile .pc-ttl {
   height: 300px;
+}
+
+.profile_line {
+  width: 486px;
+}
+
+.profile .sp-ttl {
+  display: none;
 }
 
 .profile .pc_txt,
@@ -178,7 +183,7 @@ h2 {
 }
 
 .profile .second_contents {
-  width: 58vw;
+  width: 71vw;
 }
 
 .profile .second_contents p:nth-of-type(2) {
@@ -186,6 +191,13 @@ h2 {
   color: #ec6c4e;
   width: 620px;
   margin-top: 95px;
+}
+
+/* 1366以上の設定 */
+@media screen and (min-width: 1366px) {
+  .profile .second_contents {
+    width: 55vw;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -229,16 +241,31 @@ h2 {
     width: 738px;
   }
 
-  .profile .ttl {
+  .profile .pc-ttl {
+    display: none;
+  }
+
+  .profile .sp-ttl {
+    display: block;
     height: auto;
     margin: 69px auto 28px 97px;
   }
 
-  .profile h2 {
+  .profile .sp-ttl_box {
+    position: relative;
   }
 
   .profile .cursive {
-    /* left: 55px; */
+    left: -38px;
+    bottom: 32px;
+  }
+
+  .profile_line {
+    width: 80px;
+    top: 16px;
+    bottom: auto;
+    right: auto;
+    left: -100px;
   }
 
   .profile .pc_txt,
@@ -260,19 +287,20 @@ h2 {
   }
 
   .profile .second_contents {
-    width: 520px;
+    width: 500px;
     margin-left: 42px;
     margin-top: 125px;
   }
 
   .profile .sp_txt_last {
     display: block;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 0.2em;
     line-height: 1.4;
+    color: #ec6c4e;
     width: 216px;
     margin-top: 20px;
-    margin-left: 18px;
+    margin-left: 0px;
   }
 }
 /* --------------------
@@ -285,11 +313,15 @@ h2 {
 
 .history .top_contents {
   gap: 6%;
-  position: relative;
+  /* position: relative; */
 }
 
-.history .ttl {
+.history .pc-ttl {
   height: 388px;
+}
+
+.history_line {
+  width: 220px;
 }
 
 .history .contents {
@@ -336,7 +368,7 @@ h3 {
   display: block;
   margin-top: 14px;
   margin-left: 9%;
-  position: relative;
+  /* position: relative; */
   z-index: 2;
 }
 
@@ -357,7 +389,7 @@ h3 {
 .history .content_last p {
   line-height: 1.5;
   letter-spacing: 0.025em;
-  position: relative;
+  /* position: relative; */
   z-index: 2;
 }
 
@@ -390,15 +422,21 @@ h3 {
 }
 
 @media screen and (max-width: 1100px) {
+  .history {
+    width: 170vw;
+  }
+
   .history .contents {
     max-width: none;
-    min-width: 840px;
+    /* min-width: 840px; */
+    width: 840px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .history {
-    width: 1040px;
+    /* width: 980px; */
+    width: 1080px;
     background-image: url(../images/flower002.png);
     background-repeat: no-repeat;
     background-position: right 93%;
@@ -410,17 +448,29 @@ h3 {
     width: 100%;
   }
 
-  .history .ttl {
+  .history .pc-ttl {
+    width: 290px;
     height: auto;
-    margin: 69px auto 28px;
+    margin: 69px 0px 28px;
+    /* position: relative; */
   }
 
   .history h2 {
+    width: 290px;
     margin-left: 0px;
   }
 
   .history .cursive {
-    /* left: -52px; */
+    top: -22px;
+    left: -52px;
+    bottom: auto;
+  }
+
+  .history_line {
+    top: 16px;
+    bottom: auto;
+    right: 301px;
+    /* left: 35px; */
   }
 
   .history .contents {
@@ -434,18 +484,18 @@ h3 {
 -------------------- */
 
 .skills {
-  width: 80vw;
+  width: 90vw;
   background-image: url(../images/flower002.png);
   background-repeat: no-repeat;
   background-position: left bottom;
 }
 
-.skills .ttl {
+.skills .pc-ttl {
   height: 263px;
 }
 
-.skills .ttl_line {
-  width: 350px;
+.skills_line {
+  width: 90px;
 }
 
 .skills .pc_table:nth-of-type(1) {
@@ -493,7 +543,7 @@ td {
   width: 40px;
 }
 
-.skills .icon {
+.skills-icon {
   width: 73px;
 }
 
@@ -515,11 +565,16 @@ td {
   width: 54px;
 }
 
+.sp-ttl,
 .sp_table {
   display: none;
 }
 
 @media screen and (max-width: 1100px) {
+  .skills {
+    width: 120vw;
+  }
+
   .skills table:nth-of-type(1) {
     margin-left: 8%;
   }
@@ -530,25 +585,41 @@ td {
 }
 @media screen and (max-width: 767px) {
   .skills {
-    width: 100vw;
+    width: 72vw;
     background-image: none;
   }
 
-  .skills .ttl {
-    height: auto;
+  .skills .top_contents {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .skills .sp-ttl {
+    display: block;
+    height: auto;
+    /* display: flex; */
     justify-content: center;
     margin: 69px auto 28px;
   }
 
-  .skills h2 {
-    /* width: 142px; */
+  .skills .sp-ttl_box {
+    position: relative;
   }
 
   .skills .cursive {
-    /* left: 220px; */
+    left: -38px;
+    bottom: 32px;
   }
 
+  .skills_line {
+    top: 16px;
+    bottom: auto;
+    right: 158px;
+    /* left: 35px; */
+  }
+
+  .skills .pc-ttl,
   .pc_table {
     display: none;
   }
@@ -603,6 +674,12 @@ td {
 }
 
 @media screen and (max-width: 767px) {
+  .strength .top_contents,
+  .love .top_contents,
+  .design .top_contents {
+    gap: 0px;
+  }
+
   .strength .contents,
   .love .contents,
   .design .contents {
@@ -617,19 +694,23 @@ td {
 -------------------- */
 
 .strength {
-  width: 100vw;
+  width: 62vw;
   /* width: 650px; */
   background-image: url(../images/flower003.png);
   background-repeat: no-repeat;
   background-position: right bottom;
 }
 
-.strength .ttl {
+.strength .pc-ttl {
   height: 227px;
 }
 
-.strength .ttl_line {
-  width: 970%;
+.strength_line {
+  width: 100px;
+}
+
+.strength .sp-ttl {
+  display: none;
 }
 
 .strength .contents > p:nth-of-type(1) {
@@ -641,22 +722,51 @@ td {
   margin-top: 32px;
 }
 
+@media screen and (max-width: 1100px) {
+  .strength {
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .strength {
+    width: 600px;
     background-position: right 93%;
     background-size: 160px;
   }
-
-  .strength .ttl {
-    height: auto;
+  .strength .top_contents {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .strength .pc-ttl {
+    display: none;
+  }
+
+  .strength .sp-ttl_box {
+    position: relative;
+  }
+
+  .strength .sp-ttl {
+    display: block;
+    height: auto;
+    /* display: flex; */
     justify-content: center;
 
     margin: 69px auto 65px;
   }
 
-  .strength h2 {
-    /* width: 120px; */
+  .strength .cursive {
+    left: -38px;
+    bottom: 32px;
+  }
+
+  .strength_line {
+    top: 16px;
+    bottom: auto;
+    right: 137px;
+    /* left: 35px; */
   }
 
   .strength .contents > p:nth-of-type(1) {
@@ -672,29 +782,63 @@ td {
   width: 70vw;
 }
 
-.love .ttl {
+.love .pc-ttl {
   height: 223px;
 }
 
-.love .ttl_line {
-  width: 1080%;
+.love .sp-ttl {
+  display: none;
+}
+
+.love_line {
+  width: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .love {
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .love {
-    width: 30vw;
+    /* width: 110vw; */
+    width: 460px;
   }
 
-  .love .ttl {
-    height: auto;
+  .love .top_contents {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .love .pc-ttl {
+    display: none;
+  }
+
+  .love .sp-ttl_box {
+    position: relative;
+  }
+
+  .love .sp-ttl {
+    display: block;
+    height: auto;
+    /* display: flex; */
     justify-content: center;
 
     margin: 69px auto 65px;
   }
 
-  .love h2 {
-    /* width: 120px; */
+  .love .cursive {
+    left: -38px;
+    bottom: 32px;
+  }
+
+  .love_line {
+    top: 16px;
+    bottom: auto;
+    right: 137px;
+    /* left: 35px; */
   }
 }
 
@@ -703,44 +847,92 @@ td {
 -------------------- */
 
 .design {
-  width: 100vw;
+  width: 80vw;
+  /* width: 100vw; */
   background-image: url(../images/flower004.png);
   background-repeat: no-repeat;
   background-position: 88% bottom;
 }
 
-.design .ttl {
+.design .top_contents {
+  justify-content: flex-start;
+  margin-left: 23%;
+}
+
+.design .pc-ttl {
   height: 268px;
 }
 
-.design .ttl_line {
-  width: 300%;
+.design_line {
+  width: 100px;
+}
+
+.design .sp-ttl {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .design {
+    width: 90vw;
+  }
+
+  .design .top_contents {
+    margin-left: 20%;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .design {
+    width: 100vw;
     background-position: 88% 93%;
     background-size: 160px;
   }
-
-  .design .ttl {
-    height: auto;
+  .design .top_contents {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0%;
+  }
+
+  .design .pc-ttl {
+    display: none;
+  }
+
+  .design .sp-ttl_box {
+    position: relative;
+  }
+
+  .design .sp-ttl {
+    display: block;
+    height: auto;
+    /* display: flex; */
     justify-content: center;
 
     margin: 69px auto 65px;
   }
 
-  .design h2 {
-    /* width: 167px; */
+  .design .cursive {
+    left: -38px;
+    bottom: 32px;
+  }
+
+  .design_line {
+    top: 16px;
+    bottom: auto;
+    right: 180px;
+    /* left: 35px; */
   }
 }
+
 /* 1366以上の設定 */
 @media screen and (min-width: 1366px) {
-  .skills,
+  .skills {
+    width: 1060px;
+  }
   .strength,
   .love {
-    width: 960px;
+    width: 60vw;
+    /* width: 960px; */
   }
 }
 
@@ -805,29 +997,29 @@ td {
 
 /* ーーーーーーーーーーーーーーーーーーーー
 ヒストリーのグラフが横からフェードインする
-ーーーーーーーーーーーーーーーーーーーー */
+ーーーーーーーーーーーーーーーーーーーー*/
 
-/*スタート時は要素自体を透過0にするためのopacity:0;を指定する*/
-.history_box {
-  opacity: 0;
-}
-
-/* 動かしたい動き（今回は” ふわっ” を採用）*/
-.history_fadein {
-  animation-name: fadeUpAnime;
+.fadeIn {
+  animation-name: fadeInAnime;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
-@keyframes fadeUpAnime {
+@keyframes fadeInAnime {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateX(100px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.fadeInTrigger {
+  opacity: 0;
 }

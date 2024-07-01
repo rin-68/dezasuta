@@ -1,10 +1,16 @@
 @charset "UTF-8";
 
+.page_ttl {
+  display: none;
+}
+
 .pc_container {
   display: flex;
   height: 100%;
   align-items: center;
-  margin-left: 80px;
+  /* margin-left: 80px; */
+  padding-left: 80px;
+  position: relative;
 }
 
 .contents {
@@ -89,6 +95,10 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+  .page_ttl {
+    display: flex;
+  }
+
   .pc_container {
     display: none;
   }
@@ -96,6 +106,15 @@ h2 {
     display: flex;
     height: 100%;
     align-items: center;
+  }
+
+  .sp-container .wrapper {
+    position: relative;
+  }
+
+  .scrolldown2 {
+    top: 22%;
+    left: 23px;
   }
 
   .page_ttl p:nth-of-type(2) {

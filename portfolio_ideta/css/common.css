@@ -81,6 +81,9 @@ section {
   top: 0px;
   left: 0px;
   z-index: 9980;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .top_portfolioname span {
@@ -90,7 +93,7 @@ section {
 .top_portfolioname p {
   writing-mode: vertical-rl;
   margin: 0 auto;
-  animation: loop-animation 40s linear infinite;
+  animation: loop-animation 80s linear infinite;
   white-space: nowrap;
 }
 
@@ -106,6 +109,14 @@ section {
     transform: translateY(-100%);
   }
 }
+/* @keyframes loop-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+} */
 
 @media screen and (max-width: 767px) {
   .top_portfolioname {
@@ -116,6 +127,9 @@ section {
     bottom: 0px;
     right: 0px;
     z-index: 5000;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
   }
 
   .top_portfolioname.open {
@@ -126,9 +140,11 @@ section {
     font-size: 12px;
     writing-mode: horizontal-tb;
     line-height: 3.75;
+    animation: loop-animation-767 80s linear infinite;
+    white-space: nowrap;
   }
 
-  @keyframes loop-animation {
+  @keyframes loop-animation-767 {
     from {
       transform: translateX(0);
     }
@@ -177,6 +193,19 @@ header .wrapper {
   font-size: 16px;
 }
 
+/* .px_nav .icon {
+  gap: 10px;
+} */
+
+.icon {
+  display: flex;
+  height: 47px;
+}
+
+.list-insta {
+  margin-top: 8px;
+}
+
 .pc_nav .line_vertical {
   width: 1px;
   height: 400px;
@@ -207,6 +236,29 @@ header .wrapper {
   color: #53c711;
 }
 
+.x,
+.insta {
+  width: 16px;
+  height: 16px;
+}
+
+.x a,
+.insta a {
+  /* width: 20px; */
+  /* height: 20px; */
+  opacity: 0.7;
+}
+
+.x:hover,
+.insta:hover {
+  transform: translateY(-3px);
+}
+
+.x img,
+.insta img {
+  width: 100%;
+}
+
 @media screen and (max-width: 1336px) {
   /* .header {
     width: 10%;
@@ -218,6 +270,10 @@ header .wrapper {
   .header {
     right: auto;
   }
+}
+
+.page_ttl {
+  display: none;
 }
 
 /* ーーーーーーーーーーーーーーーーーーーー 
@@ -233,6 +289,13 @@ header .wrapper {
   .pc_nav,
   header .wrapper {
     display: none;
+  }
+
+  .page_ttl {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   /* ーーーーーーーーーーーーーーーーーーーー 
@@ -326,18 +389,38 @@ header .wrapper {
     border-left: 1px solid #423732;
     transform: rotate(180deg);
     margin-left: 5%;
+    display: flex;
+    /* overflow: hidden; */
   }
 
   .menu_portfolioname p {
     font-size: 12px;
     line-height: 4;
+    animation: loop-animation 80s linear infinite;
+    white-space: nowrap;
   }
 
   .menu_portfolioname span {
     color: #ec6c4e;
   }
 
-  .sp_menu .content {
+  /* .menu_portfolioname p {
+    writing-mode: vertical-rl;
+    margin: 0 auto;
+    animation: loop-animation 80s linear infinite;
+    white-space: nowrap;
+  } */
+
+  @keyframes loop-animation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+  .sp_menu .box {
     position: relative;
 
     width: 100vw;
@@ -349,15 +432,15 @@ header .wrapper {
     height: 100%;
   }
 
-  .sp_nav ul {
+  .sp-nav_list {
     width: 100%;
     vertical-align: bottom;
     position: absolute;
-    bottom: 100px;
+    bottom: 75px;
     left: 0px;
   }
 
-  .sp_nav li {
+  .sp-nav_listitem {
     font-size: 22px;
     display: flex;
     align-items: flex-end;
@@ -376,6 +459,46 @@ header .wrapper {
     position: absolute;
     right: 22%;
     bottom: 3px;
+  }
+
+  .sp-nav_iconlist {
+    font-size: 16px;
+    height: 44px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 38%;
+  }
+
+  .sp-icon {
+    display: flex;
+    /* justify-content: flex-start; */
+    gap: 20px;
+    /* bottom: 0; */
+  }
+
+  .sp-icon_txt {
+    font-size: 19px;
+    padding-left: 0;
+  }
+
+  .sp-icon_x {
+    width: 16px;
+    border-bottom: none;
+  }
+
+  .sp-icon_insta {
+    width: 16px;
+    border-bottom: none;
+    padding-left: 0;
+  }
+
+  .sp-icon_x a,
+  .sp-icon_insta a {
+    width: 16px;
+  }
+
+  .sp-icon img {
+    vertical-align: middle;
   }
 
   .triangle_top {
@@ -398,6 +521,25 @@ header .wrapper {
     left: 0;
   }
 }
+
+/* ーーーーーーーーーーーーーーーーーーーー
+コピーライト
+ーーーーーーーーーーーーーーーーーーーー */
+.copy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 6px;
+  z-index: 9970;
+}
+
+@media screen and (max-width: 767px) {
+  .copy {
+    bottom: 51px;
+  }
+}
+
 /* ーーーーーーーーーーーーーーーーーーーー
 SP版 左上文字
 ーーーーーーーーーーーーーーーーーーーー */
@@ -462,13 +604,14 @@ SP版 左上文字
 }
 
 .float:hover {
-  top: -3px;
+  /* top: -3px; */
+  transform: translateY(-3px);
   box-shadow: 0 1px 5px #a6eb83, 0 0 10px #eaf6e2;
   border-color: #53c711;
 }
 
 /* ーーーーーーーーーーーーーーーーーーーー
-ボタンがオンマウスで浮き上がる
+ボタンがオンマウスで浮き上がる(画像）
 ーーーーーーーーーーーーーーーーーーーー*/
 .floatup {
   position: relative;
@@ -494,8 +637,9 @@ SP版 左上文字
 .scrolldown2 {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
-  top: 35%;
-  left: 6%;
+  top: 40%;
+  left: 100px;
+  /* left: 6%; */
 }
 
 /*Scrollテキストの描写*/
@@ -503,11 +647,16 @@ SP版 左上文字
   /*描画位置*/
   position: absolute;
   left: 8px;
-  bottom: 3px;
+  /* left: 210px; */
+  bottom: 7px;
+  /* bottom: 3px; */
   /*テキストの形状*/
-  color: #423732;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  color: #ec6c4e;
+  /* color: #423732; */
+  font-size: 12px;
+  /* font-size: 1rem; */
+  letter-spacing: 0.46em;
+  /* letter-spacing: 0.1em; */
   /*縦書き設定*/
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
@@ -520,21 +669,23 @@ SP版 左上文字
   /*描画位置*/
   position: absolute;
   bottom: 0;
-  left: -4px;
+  left: -5px;
+  /* left: -4px; */
   /*丸の形状*/
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #ec6c4e;
   border-radius: 50%;
-  background: #423732;
+  /* background: #423732; */
   /*丸の動き1.6秒かけて透過し、永遠にループ*/
-  animation: circlemove 1.6s ease-in-out infinite,
-    cirlemovehide 1.6s ease-out infinite;
+  animation: circlemove 2.6s ease-in-out infinite,
+    cirlemovehide 2.6s ease-out infinite;
 }
 
 /*下からの距離が変化して丸の全体が上から下に動く*/
 @keyframes circlemove {
   0% {
-    bottom: 45px;
+    bottom: 90px;
   }
   100% {
     bottom: -5px;
@@ -565,7 +716,67 @@ SP版 左上文字
   bottom: 0;
   left: 0;
   /*線の形状*/
-  width: 2px;
-  height: 50px;
-  background: #423732;
+  width: 1px;
+  /* width: 2px; */
+  /* height: 50px; */
+  height: 100px;
+  background: #ec6c4e;
+}
+/* ーーーーーーーーーーーーーーーーーーーー
+文字アニメーション 流れるテキスト
+ーーーーーーーーーーーーーーーーーーーー */
+
+/*全共通*/
+
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/*左右のアニメーション*/
+.leftAnime {
+  opacity: 0; /*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+  animation-name: slideTextX100;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* opacity: 1; */
+  opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+    transform: translateX(-100%); /*要素を左の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+  animation-name: slideTextX-100;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextX-100 {
+  from {
+    transform: translateX(100%); /*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0); /*要素を元の位置に移動*/
+    opacity: 1;
+  }
 }
